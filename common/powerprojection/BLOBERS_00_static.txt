@@ -1,0 +1,5 @@
+BLOBERS_raided_rival_for_food = {
+	power = 0.1			# multiplied with basetax
+	yearly_decay = 1
+	max = 100
+}

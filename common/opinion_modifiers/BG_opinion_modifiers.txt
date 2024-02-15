@@ -1,0 +1,29 @@
+BG_tiny_gift = {
+	opinion = 5
+	yearly_decay = 1
+}
+
+BG_small_gift = {
+	opinion = 10
+	yearly_decay = 1
+}
+
+BG_decent_gift = {
+	opinion = 15
+	yearly_decay = 1
+}
+
+BG_big_gift = {
+	opinion = 20
+	yearly_decay = 1
+}
+
+BG_great_gift = {
+	opinion = 30
+	yearly_decay = 1
+}
+
+BG_huge_gift = {
+	opinion = 50
+	yearly_decay = 1
+}

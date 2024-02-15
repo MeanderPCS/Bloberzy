@@ -1,0 +1,20 @@
+BLOBERS_huaynaputina_raid = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 2.5
+		peace_cost_factor = 1
+		peace_options = {
+			BLOBERS_steal_food
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1.25
+		peace_options = {
+			BLOBERS_steal_food
+		}
+	}
+	war_name = FOOD_RAID_WAR_NAME
+}

@@ -1,0 +1,4 @@
+MCO_using_curias_treasury_for_self_benefit = {
+	opinion = -30
+	yearly_decay = 1
+}

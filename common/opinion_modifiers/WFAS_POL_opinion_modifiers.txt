@@ -1,0 +1,4 @@
+WFAS_congress_of_vienna = {
+	opinion = 50
+	yearly_decay = 1
+}

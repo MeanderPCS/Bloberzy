@@ -1,0 +1,19 @@
+nationalism_edict = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		local_culture_conversion_cost = -0.25
+	}
+	color = {
+		66
+		135
+		245
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}

@@ -1,0 +1,19 @@
+army_supply_edict = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		supply_limit_modifier = 0.5
+	}
+	color = {
+		220
+		235
+		52
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

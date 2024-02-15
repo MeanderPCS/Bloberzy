@@ -1,0 +1,1127 @@
+BLOBERS_provinces_in_africa = {
+	potential = {
+		capital_scope = {
+			continent = africa
+		}
+	}
+	trigger = {
+		capital_scope = {
+			continent = africa
+		}
+		if = {
+			limit = {
+				tag = MAM
+			}
+			calc_true_if = {
+				all_province = {
+					continent = africa
+					owned_by = ROOT
+				}
+				amount = 55
+			}
+		}
+		else_if = {
+			limit = {
+				tag = TUN
+			}
+			calc_true_if = {
+				all_province = {
+					continent = africa
+					owned_by = ROOT
+				}
+				amount = 35
+			}
+		}
+		else_if = {
+			limit = {
+				tag = MOR
+			}
+			calc_true_if = {
+				all_province = {
+					continent = africa
+					owned_by = ROOT
+				}
+				amount = 45
+			}
+		}
+		else = {
+			calc_true_if = {
+				all_province = {
+					continent = africa
+					owned_by = ROOT
+				}
+				amount = 20
+			}
+		}
+	}
+	colonists = 1
+	global_colonial_growth = 10
+}
+
+BLOBERS_colonists_from_tech_13 = {
+	potential = {
+		dip_tech = 13
+	}
+	trigger = {
+		dip_tech = 13
+		total_development = 100
+		capital_scope = {
+			continent = europe
+		}
+	}
+	colonists = 1
+	global_colonial_growth = 10
+}
+
+BLOBERS_colonists_from_tech_16 = {
+	potential = {
+		dip_tech = 16
+	}
+	trigger = {
+		dip_tech = 16
+		total_development = 100
+		capital_scope = {
+			continent = europe
+		}
+	}
+	colonists = 1
+	global_colonial_growth = 10
+}
+
+BLOBERS_colonists_from_tech_21 = {
+	potential = {
+		dip_tech = 19
+	}
+	trigger = {
+		dip_tech = 19
+		total_development = 100
+		capital_scope = {
+			continent = europe
+		}
+	}
+	colonists = 1
+	global_colonial_growth = 10
+}
+
+BLOBERS_provinces_in_america_10 = {
+	potential = {
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					owned_by = ROOT
+				}
+				amount = 20
+			}
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 10
+		}
+	}
+	merchants = 1
+}
+
+BLOBERS_provinces_in_america_20 = {
+	potential = {
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 20
+		}
+		NOT = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					owned_by = ROOT
+				}
+				amount = 30
+			}
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 20
+		}
+	}
+	merchants = 2
+}
+
+BLOBERS_provinces_in_america_30 = {
+	potential = {
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 30
+		}
+		NOT = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					owned_by = ROOT
+				}
+				amount = 40
+			}
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 30
+		}
+	}
+	merchants = 3
+}
+
+BLOBERS_provinces_in_america_40 = {
+	potential = {
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 40
+		}
+		NOT = {
+			calc_true_if = {
+				all_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					owned_by = ROOT
+				}
+				amount = 50
+			}
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 40
+		}
+	}
+	merchants = 4
+}
+
+BLOBERS_provinces_in_america_50 = {
+	potential = {
+		capital_scope = {
+			NOT = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 50
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+				owned_by = ROOT
+			}
+			amount = 50
+		}
+	}
+	merchants = 5
+}
+
+BLOBERS_marines_regiments = {
+	potential = {
+		ai = no
+		always = yes
+	}
+	trigger = {
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	allowed_marine_fraction = 0.1
+}
+
+BLOBERS_we_stand_alone = {
+	potential = {
+		is_great_power = yes
+		NOT = {
+			has_country_modifier = BLOBERS_too_many_great_allies
+		}
+		NOT = {
+			has_country_modifier = BLOBERS_balance_of_powers
+		}
+	}
+	trigger = {
+		always = yes
+	}
+	stability_cost_modifier = -0.3
+	governing_capacity_modifier = 0.2
+	administrative_efficiency = 0.05
+	reform_progress_growth = 0.3
+	development_cost = -0.05
+	prestige = 1
+}
+
+BLOBERS_balance_of_powers = {
+	potential = {
+		is_great_power = yes
+		NOT = {
+			has_country_modifier = BLOBERS_too_many_great_allies
+		}
+	}
+	trigger = {
+		calc_true_if = {
+			all_ally = {
+				OR = {
+					total_development = 1500
+					is_great_power = yes
+				}
+				#ai = no
+			}
+			amount = 1
+		}
+	}
+	stability_cost_modifier = 0.15
+	governing_capacity_modifier = -0.15
+	administrative_efficiency = -0.05
+	reform_progress_growth = -0.15
+	mercantilism_cost = 0.5
+}
+
+BLOBERS_too_many_great_allies = {
+	potential = {
+		is_great_power = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_ally = {
+				OR = {
+					total_development = 1500
+					is_great_power = yes
+				}
+				#ai = no
+			}
+			amount = 2
+		}
+	}
+	stability_cost_modifier = 0.3
+	governing_capacity_modifier = -0.4
+	administrative_efficiency = -0.1
+	reform_progress_growth = -0.3
+	mercantilism_cost = 2
+	prestige = -1
+	global_regiment_cost = 0.1
+}
+
+#BLOBERS_merc_quantity_10 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_10
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 10
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_10
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 20
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_10
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 10
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.00555
+#}
+#
+#BLOBERS_merc_quantity_20 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_20
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 20
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_20
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 30
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_20
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 20
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0111
+#}
+#
+#BLOBERS_merc_quantity_30 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_30
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 30
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_30
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 40
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_30
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 30
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0166
+#}
+#
+#BLOBERS_merc_quantity_40 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_40
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 40
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_40
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 50
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_40
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 40
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0222
+#}
+#
+#BLOBERS_merc_quantity_50 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_50
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 50
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_50
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 60
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_50
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 50
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0277
+#}
+#
+#BLOBERS_merc_quantity_60 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_60
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 60
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_60
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 70
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_60
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 60
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0333
+#}
+#
+#BLOBERS_merc_quantity_70 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_70
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 70
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_70
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 80
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_70
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 70
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0388
+#}
+#
+#BLOBERS_merc_quantity_80 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_80
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 80
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_80
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 90
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_80
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 80
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.0444
+#}
+#
+#BLOBERS_merc_quantity_90 = {
+#	potential = {
+#		ai = no
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_90
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 90
+#			}
+#		}
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_90
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			NOT = {
+#				check_variable = {
+#					which = BLOBERS_merc_army
+#					value = 101
+#				}
+#			}
+#		}
+#	}
+#	trigger = {
+#		variable_arithmetic_trigger = {
+#			custom_tooltip = BLOBERS_merc_fraction_90
+#			export_to_variable = {
+#				which = BLOBERS_all_army
+#				value = trigger_value:army_size
+#			}
+#			export_to_variable = {
+#				which = BLOBERS_merc_army
+#				value = trigger_value:num_of_mercenaries
+#			}
+#			divide_variable = {
+#				which = BLOBERS_merc_army
+#				which = BLOBERS_all_army
+#			}
+#			multiply_variable = {
+#				which = BLOBERS_merc_army
+#				value = 100
+#			}
+#			check_variable = {
+#				which = BLOBERS_merc_army
+#				value = 90
+#			}
+#		}
+#	}
+#	yearly_army_professionalism = -0.05
+#}

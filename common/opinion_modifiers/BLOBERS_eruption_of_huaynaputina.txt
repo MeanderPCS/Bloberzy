@@ -1,0 +1,5 @@
+BLOBERS_food_raid_opinion = {
+	opinion = -50
+	yearly_decay = 1
+}
+

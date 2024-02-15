@@ -1,0 +1,20 @@
+BLOBERS_take_capital_vassalize_player = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 2.5
+		peace_cost_factor = 0.9
+		peace_options = {
+			po_subjugate_vassal
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1.25
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	war_name = FOOD_RAID_WAR_NAME
+}
