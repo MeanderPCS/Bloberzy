@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = WFAS_timeoftroubles_duma
+government_rank = 2
+primary_culture = byelorussian
+religion = orthodox
+technology_group = eastern
+unit_type = eastern
+capital = 276# Minsk

@@ -1,0 +1,7 @@
+	### WFAS Icons ###
+spriteTypes = {
+	spriteType = {
+		name = "WFAS_mission_turkish_delight"
+		texturefile = "gfx\interface\missions\WFAS\WFAS_mission_turkish_delight.dds"
+	}
+}

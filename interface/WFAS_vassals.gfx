@@ -1,0 +1,16 @@
+spriteTypes = {
+	maskedShieldType = {
+		name = "GFX_minishield_protectorate"
+		textureFile1 = "gfx//interface//minishield.tga"
+		textureFile2 = "gfx//interface//minimask.tga"
+		effectFile = "gfx//FX//maskedflag.lua"
+		textureFile3 = "gfx//interface//client_state_symbols_mini.dds"
+		noOfFrames = 119
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	spriteType = {
+		name = "GFX_icon_protectorate"
+		texturefile = "gfx/interface/icon_protectorate.dds"
+	}
+}

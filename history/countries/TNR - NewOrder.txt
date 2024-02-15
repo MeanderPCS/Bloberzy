@@ -1,0 +1,9 @@
+government = theocracy
+add_government_reform = WFAS_orders_dual_order_reform
+government_rank = 2
+primary_culture = prussian
+add_accepted_culture = latvian
+add_accepted_culture = estonian
+religion = catholic
+technology_group = western
+capital = 41# Königsberg

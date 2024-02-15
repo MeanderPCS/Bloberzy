@@ -1,0 +1,2 @@
+#315 - Finnmark
+religion = norse_pagan_reformed

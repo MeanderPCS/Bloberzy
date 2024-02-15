@@ -1,0 +1,2 @@
+#285 - Kaffa
+trade_goods = slaves
