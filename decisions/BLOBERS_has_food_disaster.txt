@@ -1,0 +1,19 @@
+country_decisions = {
+	BLOBERS_has_food = {
+		potential = {
+			has_disaster = BLOBERS_eruption_of_huaynaputina
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_food.tooltip
+					has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,472 @@
+namespace = WFAS_orders
+#Union of orders
+country_event = {
+	id = WFAS_orders.1
+	title = "WFAS_orders_1_title"
+	desc = "WFAS_orders_1_desc"
+	picture = WOUNDED_SOLDIERS_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		tag = LIV
+		is_subject = no
+		TEU = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				junior_union_with = ROOT
+			}
+		}
+		NOT = {
+			is_year = 1500
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.1
+			is_year = 1450
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1452
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1455
+		}
+	}
+	option = {
+		name = "WFAS_orders_1_union"
+		TEU = {
+			create_union = ROOT
+			add_government_reform = WFAS_orders_dual_order_reform
+		}
+		trigger = {
+			LIV = {
+				ai = yes
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "WFAS_orders_1_union"
+		create_union = TEU
+		add_government_reform = WFAS_orders_dual_order_reform
+		trigger = {
+			LIV = {
+				ai = no
+			}
+			TEU = {
+				ai = yes
+				was_player = no
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "WFAS_orders_1_independent"
+		TEU = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = ROOT
+				months = 120
+			}
+			remove_historical_friend = ROOT
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Order banners
+country_event = {
+	id = WFAS_orders.2
+	title = "WFAS_orders_banners_event_title"
+	desc = "WFAS_orders_banners_event_desc"
+	picture = LAND_MILITARY_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+		is_year = 1455
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "WFAS_orders_enact_banners"
+		set_estate_privilege = WFAS_establish_order_banners
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "WFAS_orders_not_enact_banners"
+		add_prestige = -10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Dual order enforced
+country_event = {
+	id = WFAS_orders.5
+	title = "WFAS_orders_dual_order_event_title"
+	desc = "WFAS_orders_dual_order_event_desc"
+	picture = CONQUEST_eventPicture
+	trigger = {
+		OR = {
+			AND = {
+				tag = TEU
+				LIV = {
+					OR = {
+						junior_union_with = TEU
+						is_subject_of = TEU
+					}
+				}
+			}
+			AND = {
+				tag = LIV
+				TEU = {
+					OR = {
+						junior_union_with = LIV
+						is_subject_of = LIV
+					}
+				}
+			}
+		}
+		NOT = {
+			has_reform = WFAS_orders_dual_order_reform
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "WFAS_orders_dual_order_event_option"
+		add_government_reform = WFAS_orders_dual_order_reform
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Treaty of Stensby (Denmark)
+country_event = {
+	id = WFAS_orders.6
+	title = "WFAS_orders_stensby_1_title"
+	desc = "WFAS_orders_stensby_1_desc"
+	picture = DIPLOMACY_SIGNING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = DAN
+		is_year = 1450
+		OR = {
+			AND = {
+				LIV = {
+					exists = yes
+					NOT = {
+						is_rival = ROOT
+					}
+					owns_or_non_sovereign_subject_of = 35
+					owns_or_non_sovereign_subject_of = 36
+					owns_or_non_sovereign_subject_of = 1842
+				}
+				NOT = {
+					is_rival = LIV
+				}
+				NOT = {
+					war_with = LIV
+				}
+				IF = {
+					limit = {
+						LIV = {
+							is_subject = yes
+						}
+					}
+					LIV = {
+						overlord = {
+							NOT = {
+								is_rival = ROOT
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				TNR = {
+					exists = yes
+					is_subject = no
+					NOT = {
+						is_rival = ROOT
+					}
+					owns_or_non_sovereign_subject_of = 35
+					owns_or_non_sovereign_subject_of = 36
+					owns_or_non_sovereign_subject_of = 1842
+				}
+				NOT = {
+					war_with = LIV
+				}
+				NOT = {
+					is_rival = TNR
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = "WFAS_orders_stensby_1_resign"
+		custom_tooltip = "WFAS_orders_stensby_tooltip"
+		35 = {
+			owner = {
+				IF = {
+					limit = {
+						tag = LIV
+						is_subject = yes
+					}
+					overlord = {
+						country_event = {
+							id = WFAS_orders.7
+						}
+					}
+				}
+				ELSE = {
+					country_event = {
+						id = WFAS_orders.7
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = "WFAS_orders_stensby_1_leave"
+		add_prestige = -5
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+#Treaty of Stensby (Orders)
+country_event = {
+	id = WFAS_orders.7
+	title = "WFAS_orders_stensby_2_title"
+	desc = "WFAS_orders_stensby_2_desc"
+	picture = DIPLOMACY_SIGNING_eventPicture
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = "WFAS_orders_stensby_2_agree"
+		custom_tooltip = "WFAS_orders_danish_condottieri_tooltip"
+		add_opinion = {
+			who = DAN
+			modifier = WFAS_orders_treaty_of_stensby_opinion
+		}
+		DAN = {
+			add_opinion = {
+				who = ROOT
+				modifier = WFAS_orders_treaty_of_stensby_opinion
+			}
+		}
+		create_alliance = DAN
+		tooltip = {
+			35 = {
+				cede_province = DAN
+			}
+			36 = {
+				cede_province = DAN
+			}
+			1842 = {
+				cede_province = DAN
+			}
+		}
+		hidden_effect = {
+			35 = {
+				IF = {
+					limit = {
+						owner = {
+							tag = LIV
+						}
+						is_core = LIV
+					}
+					remove_core = LIV
+				}
+				IF = {
+					limit = {
+						owner = {
+							tag = TNR
+						}
+						is_core = TNR
+					}
+					remove_core = TNR
+				}
+				cede_province = DAN
+				add_core = DAN
+			}
+			36 = {
+				IF = {
+					limit = {
+						owner = {
+							tag = LIV
+						}
+						is_core = LIV
+					}
+					remove_core = LIV
+				}
+				IF = {
+					limit = {
+						owner = {
+							tag = TNR
+						}
+						is_core = TNR
+					}
+					remove_core = TNR
+				}
+				cede_province = DAN
+				add_core = DAN
+			}
+			1842 = {
+				IF = {
+					limit = {
+						owner = {
+							tag = LIV
+						}
+						is_core = LIV
+					}
+					remove_core = LIV
+				}
+				IF = {
+					limit = {
+						owner = {
+							tag = TNR
+						}
+						is_core = TNR
+					}
+					remove_core = TNR
+				}
+				cede_province = DAN
+				add_core = DAN
+			}
+		}
+		set_country_flag = WFAS_orders_stensby_treaty_flag
+		ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = "WFAS_orders_stensby_2_decline"
+		reverse_add_opinion = {
+			who = DAN
+			modifier = WFAS_orders_refused_stensby
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+#Riga and the Confederation (Riga)
+country_event = {
+	id = WFAS_orders.8
+	title = "WFAS_orders_riga_incorporation_1_title"
+	desc = "WFAS_orders_riga_incorporation_1_desc"
+	picture = DIPLOMACY_SIGNING_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		tag = RIG
+		is_subject = no
+		owns_core_province = 38
+		LIV = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				is_rival = ROOT
+			}
+		}
+		NOT = {
+			is_rival = LIV
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "WFAS_orders_riga_incorporation_1_subject"
+		tooltip = {
+			add_opinion = {
+				who = LIV
+				modifier = WFAS_orders_riga_joined
+			}
+			LIV = {
+				add_opinion = {
+					who = RIG
+					modifier = WFAS_orders_riga_joined
+				}
+				vassalize = RIG
+			}
+		}
+		hidden_effect = {
+			LIV = {
+				country_event = {
+					id = WFAS_orders.9
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "WFAS_orders_riga_incorporation_1_independent"
+		LIV = {
+			add_opinion = {
+				who = ROOT
+				modifier = WFAS_orders_declined_subjugation
+			}
+			remove_historical_friend = ROOT
+		}
+		reverse_add_casus_belli = {
+			type = cb_vassalize_mission
+			target = LIV
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Riga and the Confederation (Livonians)
+country_event = {
+	id = WFAS_orders.9
+	title = "WFAS_orders_riga_incorporation_2_title"
+	desc = "WFAS_orders_riga_incorporation_2_desc"
+	picture = DIPLOMACY_SIGNING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "WFAS_orders_riga_incorporation_2_option"
+		reverse_add_opinion = {
+			who = RIG
+			modifier = WFAS_orders_riga_joined
+		}
+		add_opinion = {
+			who = RIG
+			modifier = WFAS_orders_riga_joined
+		}
+		vassalize = RIG
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,40 @@
+country_decisions = {
+	BLOBERS_invite_jewish_minority = {
+		potential = {
+			ai = no
+			any_owned_province = {
+				controlled_by = ROOT
+				is_capital = no
+				continent = europe
+			}
+			all_owned_province = {
+				NOT = {
+					religion = jewish
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			all_owned_province = {
+				NOT = {
+					religion = jewish
+				}
+			}
+		}
+		effect = {
+			add_treasury = 100
+			random_owned_province = {
+				limit = {
+					controlled_by = ROOT
+					is_capital = no
+					continent = europe
+				}
+				add_base_tax = 1
+				change_religion = jewish
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

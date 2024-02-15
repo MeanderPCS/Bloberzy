@@ -1,0 +1,257 @@
+namespace = RB_ideagroups
+#######################################
+# RB_logistics_ideas
+#######################################
+# Enhanced fort supply methods (choice)
+country_event = {
+	id = RB_ideagroups.1
+	title = RB_ideagroups.1.t
+	desc = RB_ideagroups.1.d
+	picture = FORT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_logistics_ideas
+		is_at_war = yes
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.1.a
+		add_prestige = 10
+		add_country_modifier = {
+			name = RB_event_enhanced_fort_supply_1
+			duration = 7300
+		}
+	}
+	option = {
+		name = RB_ideagroups.1.b
+		add_mil_power = 50
+	}
+}
+
+# Roads systems (good)
+country_event = {
+	id = RB_ideagroups.2
+	title = RB_ideagroups.2.t
+	desc = RB_ideagroups.2.d
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_logistics_ideas
+		is_at_war = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.2.a
+		add_country_modifier = {
+			name = RB_event_road_systems
+			duration = 3650
+		}
+	}
+}
+
+# Camp ladies (good/choice)
+country_event = {
+	id = RB_ideagroups.3
+	title = RB_ideagroups.3.t
+	desc = RB_ideagroups.3.d
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_logistics_ideas
+		is_at_war = yes
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.3.a
+		add_country_modifier = {
+			name = RB_event_the_camp_discipline
+			duration = 3650
+		}
+	}
+	option = {
+		name = RB_ideagroups.3.b
+		add_country_modifier = {
+			name = RB_event_camp_ladies
+			duration = 3650
+		}
+	}
+}
+
+# Supply Crisis (bad)
+country_event = {
+	id = RB_ideagroups.4
+	title = RB_ideagroups.4.t
+	desc = RB_ideagroups.4.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_logistics_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.4.a
+		add_country_modifier = {
+			name = RB_event_supply_crisis
+			duration = 3650
+		}
+	}
+	option = {
+		name = RB_ideagroups.4.b
+		add_years_of_income = -0.25
+	}
+}
+
+#######################################
+# RB_production_ideas
+#######################################
+# Cheap materials (good)
+country_event = {
+	id = RB_ideagroups.5
+	title = RB_ideagroups.5.t
+	desc = RB_ideagroups.5.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_production_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.5.a
+		add_country_modifier = {
+			name = RB_event_cheap_materials
+			duration = 7300
+		}
+	}
+}
+
+# Sell or invest (choice)
+country_event = {
+	id = RB_ideagroups.6
+	title = RB_ideagroups.6.t
+	desc = RB_ideagroups.6.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_production_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.6.a
+		add_years_of_income = -0.25
+		add_country_modifier = {
+			name = RB_event_improved_production
+			duration = 7300
+		}
+	}
+	option = {
+		name = RB_ideagroups.6.b
+		add_years_of_income = 0.25
+		add_country_modifier = {
+			name = RB_event_drop_of_production
+			duration = 7300
+		}
+	}
+}
+
+# Sell or invest (choice)
+country_event = {
+	id = RB_ideagroups.6
+	title = RB_ideagroups.6.t
+	desc = RB_ideagroups.6.d
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_production_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.6.a
+		add_years_of_income = -0.25
+		add_country_modifier = {
+			name = RB_event_improved_production
+			duration = 7300
+		}
+	}
+	option = {
+		name = RB_ideagroups.6.b
+		add_years_of_income = 0.25
+		add_country_modifier = {
+			name = RB_event_drop_of_production
+			duration = 7300
+		}
+	}
+}
+
+# Improved Residential Building Architecture (choice)
+country_event = {
+	id = RB_ideagroups.7
+	title = RB_ideagroups.7.t
+	desc = RB_ideagroups.7.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_production_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.7.a
+		add_adm_power = 25
+		add_country_modifier = {
+			name = RB_event_city_expansion
+			duration = 7300
+		}
+	}
+	option = {
+		name = RB_ideagroups.7.b
+		add_mil_power = 25
+		add_country_modifier = {
+			name = RB_event_growing_population
+			duration = 7300
+		}
+	}
+}
+
+# The Great Depression (bad)
+country_event = {
+	id = RB_ideagroups.8
+	title = RB_ideagroups.8.t
+	desc = RB_ideagroups.8.d
+	picture = FAMINE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = RB_production_ideas
+		NOT = {
+			has_country_flag = RB_the_great_depression
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = RB_ideagroups.8.a
+		add_stability = -1
+		add_country_modifier = {
+			name = RB_event_the_great_depression
+			duration = 3650
+		}
+		hidden_effect = {
+			set_consort_flag = RB_the_great_depression
+		}
+	}
+}

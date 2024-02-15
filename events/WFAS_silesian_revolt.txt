@@ -1,0 +1,206 @@
+namespace = WFAS_flavor_pol
+normal_or_historical_nations = yes
+country_event = {
+	id = WFAS_flavor_pol.1
+	title = "WFAS_flavor_pol.1.title"
+	desc = "WFAS_flavor_pol.1.desc"
+	picture = REVOLUTION_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		OR = {
+			BOH = {
+				#boh is bot
+				ai = yes
+			}
+			AND = {
+				#both are players
+				BOH = {
+					ai = no
+				}
+				OR = {
+					POL = {
+						ai = no
+					}
+					PLC = {
+						ai = no
+					}
+				}
+			}
+		}
+		OR = {
+			tag = POL
+			tag = PLC
+		}
+		ROOT = {
+			NOT = {
+				truce_with = BOH
+			}
+			NOT = {
+				junior_union_with = BOH
+			}
+		}
+		exists = BOH
+		BOH = {
+			NOT = {
+				is_at_war = yes
+			}
+			NOT = {
+				guaranteed_by = ROOT
+			}
+			NOT = {
+				alliance_with = ROOT
+			}
+			NOT = {
+				truce_with = ROOT
+			}
+			NOT = {
+				junior_union_with = ROOT
+			}
+		}
+		OR = {
+			exists = PLC
+			exists = POL
+		}
+		if = {
+			limit = {
+				exists = POL
+			}
+			POL = {
+				is_at_war = no
+			}
+			NOT = {
+				exists = PLC
+			}
+		}
+		if = {
+			limit = {
+				exists = PLC
+			}
+			PLC = {
+				is_at_war = no
+			}
+			NOT = {
+				exists = POL
+			}
+		}
+		is_year = 1490
+		NOT = {
+			is_year = 1600
+		}
+		silesia_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = BOH
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = "WFAS_flavor_pol.1.a"
+		hidden_effect = {
+			set_country_flag = WFAS_silesians_supported_by_poland
+			2966 = {
+				discover_country = SIL
+				add_core = SIL
+				add_core = BOH
+				cede_province = SIL
+			}
+			4238 = {
+				discover_country = SIL
+				add_core = SIL
+				add_core = BOH
+				cede_province = SIL
+			}
+			264 = {
+				discover_country = SIL
+				add_core = SIL
+				add_core = BOH
+				cede_province = SIL
+			}
+			4723 = {
+				discover_country = SIL
+				add_core = SIL
+				add_core = BOH
+				cede_province = SIL
+			}
+			263 = {
+				discover_country = SIL
+				add_core = SIL
+				add_core = BOH
+				cede_province = SIL
+			}
+			vassalize = SIL
+			SIL = {
+				declare_war_with_cb = {
+					who = BOH
+					casus_belli = cb_independence_war
+				}
+			}
+		}
+		custom_tooltip = WFAS_flavor_pol.1.tooltip
+		hidden_effect = {
+			BOH = {
+				country_event = {
+					id = WFAS_flavor_pol.3
+					days = 0
+					random = 0
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "WFAS_flavor_pol.1.b"
+		add_prestige = -5
+		hidden_effect = {
+			BOH = {
+				country_event = {
+					id = WFAS_flavor_pol.2
+					days = 0
+					random = 0
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = WFAS_flavor_pol.2
+	title = "WFAS_flavor_pol.2.title"
+	desc = "WFAS_flavor_pol.2.desc"
+	picture = REVOLUTION_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			4238 = {
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = "WFAS_flavor_pol.2.a"
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = WFAS_flavor_pol.3
+	title = "WFAS_flavor_pol.3.title"
+	desc = "WFAS_flavor_pol.3.desc"
+	picture = REVOLUTION_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = "WFAS_flavor_pol.3.a"
+	}
+}

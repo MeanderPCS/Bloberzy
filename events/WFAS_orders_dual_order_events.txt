@@ -1,0 +1,240 @@
+namespace = WFAS_orders_do
+#Electing heir
+country_event = {
+	id = WFAS_orders_do.1
+	title = "WFAS_orders_do_heir_title"
+	desc = "WFAS_orders_do_heir_desc"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+		has_government_attribute = heir
+		has_heir = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "WFAS_orders_do_heir_teu"
+		define_heir = {
+			culture = prussian
+			male = yes
+			age = 40
+			claim = 95
+		}
+		set_heir_flag = WFAS_orders_do_teu_flag
+		change_statists_vs_monarchists = -0.3
+		add_devotion = 5
+	}
+	option = {
+		name = "WFAS_orders_do_heir_liv"
+		define_heir = {
+			culture = latvian
+			male = yes
+			age = 41
+			claim = 90
+		}
+		set_heir_flag = WFAS_orders_do_liv_flag
+		change_statists_vs_monarchists = 0.3
+		add_devotion = 5
+	}
+}
+
+#Debate
+country_event = {
+	id = WFAS_orders_do.2
+	title = "WFAS_orders_do_debate_title"
+	desc = "WFAS_orders_do_debate_desc"
+	picture = DIPLOMAT_INTERROGATION_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+	}
+	option = {
+		name = "WFAS_orders_do_debate_army"
+		add_army_tradition = 10
+		change_statists_vs_monarchists = -0.1
+	}
+	option = {
+		name = "WFAS_orders_do_debate_autonomy"
+		every_owned_province = {
+			add_local_autonomy = -5
+		}
+		change_statists_vs_monarchists = -0.1
+	}
+	option = {
+		name = "WFAS_orders_do_debate_trade"
+		add_years_of_income = 0.3
+		change_statists_vs_monarchists = 0.1
+	}
+	option = {
+		name = "WFAS_orders_do_debate_missionary"
+		add_country_modifier = {
+			name = "WFAS_orders_do_debate_missionary_modifier"
+			duration = 1095
+		}
+		change_statists_vs_monarchists = 0.1
+	}
+}
+
+#Investment
+country_event = {
+	id = WFAS_orders_do.3
+	title = "WFAS_orders_do_invest_title"
+	desc = "WFAS_orders_do_invest_desc"
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+	}
+	option = {
+		name = "WFAS_orders_do_invest_teu"
+		add_yearly_manpower = 0.5
+		change_statists_vs_monarchists = -0.1
+	}
+	option = {
+		name = "WFAS_orders_do_invest_liv"
+		add_stability_or_adm_power = yes
+		change_statists_vs_monarchists = 0.1
+	}
+}
+
+#Hansa
+country_event = {
+	id = WFAS_orders_do.4
+	title = "WFAS_orders_do_hansa_title"
+	desc = "WFAS_orders_do_hansa_desc"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+	}
+	option = {
+		name = "WFAS_orders_do_hansa_curtail"
+		add_country_modifier = {
+			name = "WFAS_orders_do_hansa_curtailed"
+			duration = 1460
+		}
+		add_mercantilism = 2
+		change_statists_vs_monarchists = -0.1
+	}
+	option = {
+		name = "WFAS_orders_do_hansa_submit"
+		add_country_modifier = {
+			name = "WFAS_orders_do_hansa_submitted"
+			duration = 1460
+		}
+		add_mercantilism = -2
+		change_statists_vs_monarchists = 0.1
+	}
+}
+
+#Ruler resigns
+country_event = {
+	id = WFAS_orders_do.5
+	title = "WFAS_orders_do_resign_title"
+	desc = "WFAS_orders_do_resign_desc"
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_reform = WFAS_orders_dual_order_reform
+		has_heir = yes
+	}
+	option = {
+		name = "WFAS_orders_do_resign_option"
+		custom_tooltip = WFAS_orders_do_resign_tooltip
+		hidden_effect = {
+			kill_ruler = yes
+		}
+		if = {
+			limit = {
+				has_ruler_flag = WFAS_orders_do_teu_flag
+			}
+			change_statists_vs_monarchists = 0.2
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = WFAS_orders_do_liv_flag
+			}
+			change_statists_vs_monarchists = -0.2
+		}
+	}
+}
+
+#General self-righteousness
+country_event = {
+	id = WFAS_orders_do.6
+	title = "WFAS_orders_do_general_title"
+	desc = "WFAS_orders_do_general_desc"
+	picture = VILLAGE_RAIDED_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_estate_privilege = WFAS_establish_order_banners
+		is_at_war = no
+	}
+	option = {
+		name = "WFAS_orders_do_general_traitor"
+		random_owned_province = {
+			limit = {
+				controlled_by = ROOT
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = "WFAS_orders_do_general_allow"
+		add_country_modifier = {
+			name = "WFAS_orders_lawlessness"
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+#Prominent leader
+country_event = {
+	id = WFAS_orders_do.7
+	title = "WFAS_orders_do_leader_title"
+	desc = "WFAS_orders_do_leader_desc"
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_estate_privilege = WFAS_establish_order_banners
+		had_recent_war = 2
+	}
+	option = {
+		name = "WFAS_orders_do_leader_general"
+		create_general = {
+			tradition = 100
+		}
+	}
+	option = {
+		name = "WFAS_orders_do_leader_officer"
+		add_army_tradition = 15
+	}
+}

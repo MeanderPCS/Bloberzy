@@ -1,0 +1,36 @@
+country_decisions = {
+	BLOBERS_recruit_conquistador = {
+		potential = {
+			ai = no
+			dip_tech = 13
+		}
+		allow = {
+			dip_tech = 13
+			mil_power = 50
+		}
+		effect = {
+			add_mil_power = -50
+			create_conquistador = { tradition = 25 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	BLOBERS_recruit_explorer = {
+		potential = {
+			ai = no
+			dip_tech = 13
+		}
+		allow = {
+			dip_tech = 13
+			dip_power = 50
+		}
+		effect = {
+			add_dip_power = -50
+			create_explorer = { tradition = 25 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,17 @@
+country_decisions = {
+	RMM_remind_me = {
+		potential = {
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = RMM.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

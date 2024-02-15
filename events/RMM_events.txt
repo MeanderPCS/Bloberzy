@@ -1,0 +1,230 @@
+namespace = RMM
+#Start
+country_event = {
+	id = RMM.1
+	title = "RMM_title"
+	desc = "RMM_start_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_raid_coast"
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		country_event = {
+			id = RMM.3
+			days = 3650
+		}
+	}
+	option = {
+		name = "RMM_exploit_tax"
+		trigger = {
+			any_owned_province = {
+				base_tax = 2
+			}
+		}
+		country_event = {
+			id = RMM.4
+			days = 7300
+		}
+	}
+	option = {
+		name = "RMM_agenda"
+		country_event = {
+			id = RMM.5
+			days = 1825
+		}
+	}
+	option = {
+		name = "RMM_insult"
+		country_event = {
+			id = RMM.6
+			days = 3650
+		}
+	}
+	option = {
+		name = "RMM_estate_land"
+		country_event = {
+			id = RMM.7
+			days = 1825
+		}
+	}
+	option = {
+		name = "RMM_other"
+		country_event = {
+			id = RMM.2
+		}
+	}
+	option = {
+		name = "RMM_nevermind"
+	}
+}
+
+#Other 
+country_event = {
+	id = RMM.2
+	title = "RMM_title"
+	desc = "RMM_other_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_1_year"
+		country_event = {
+			id = RMM.8
+			days = 365
+		}
+	}
+	option = {
+		name = "RMM_4_years"
+		country_event = {
+			id = RMM.9
+			days = 1460
+		}
+	}
+	option = {
+		name = "RMM_5_years"
+		country_event = {
+			id = RMM.10
+			days = 1825
+		}
+	}
+	option = {
+		name = "RMM_10_years"
+		country_event = {
+			id = RMM.11
+			days = 3650
+		}
+	}
+	option = {
+		name = "RMM_20_years"
+		country_event = {
+			id = RMM.12
+			days = 7300
+		}
+	}
+	option = {
+		name = "RMM_nevermind"
+	}
+}
+
+#Raid Coast
+country_event = {
+	id = RMM.3
+	title = "RMM_title"
+	desc = "RMM_raid_coast_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#Exploit Tax
+country_event = {
+	id = RMM.4
+	title = "RMM_title"
+	desc = "RMM_exploit_tax_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#Agenda
+country_event = {
+	id = RMM.5
+	title = "RMM_title"
+	desc = "RMM_agenda_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#Insult
+country_event = {
+	id = RMM.6
+	title = "RMM_title"
+	desc = "RMM_insult_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#Estate Land
+country_event = {
+	id = RMM.7
+	title = "RMM_title"
+	desc = "RMM_estate_land_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#1 year
+country_event = {
+	id = RMM.8
+	title = "RMM_title"
+	desc = "RMM_1_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#4 years
+country_event = {
+	id = RMM.9
+	title = "RMM_title"
+	desc = "RMM_4_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#5 years
+country_event = {
+	id = RMM.10
+	title = "RMM_title"
+	desc = "RMM_5_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#10 years
+country_event = {
+	id = RMM.11
+	title = "RMM_title"
+	desc = "RMM_10_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}
+
+#20 years
+country_event = {
+	id = RMM.12
+	title = "RMM_title"
+	desc = "RMM_20_desc"
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "RMM_thanks"
+	}
+}

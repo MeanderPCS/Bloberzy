@@ -1,0 +1,159 @@
+country_decisions = {
+	DE_gotlandian_corsair = {
+		major = yes
+		potential = {
+			tag = DAN
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 40
+				}
+			}
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = decisiongotlandcorsair
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 25			# Gotland
+		}
+		allow = {
+			NOT = {
+				exists = GOT
+			}
+			num_of_cities = 3
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 25			# Gotland	
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+			}
+			25 = {
+				privateer_power = {
+					country = FROM
+					share = 15
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_dan.23
+				days = 0
+				random = 0
+			}
+			set_country_flag = decisiongotlandcorsair
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	DE_join_hre = {
+		major = yes
+		potential = {
+			current_age = age_of_reformation
+			has_dlc = "Emperor"
+			tag = DAN
+			is_part_of_hre = no
+			is_colonial_nation = no
+			hre_leagues_enabled = no
+			hre_religion_treaty = no
+			hre_religion_locked = no
+			is_part_of_hre = no
+			is_subject = no
+			NOT = {
+				has_country_flag = decisionjoinhre
+			}
+		}
+		allow = {
+			NOT = {
+				active_imperial_incident = any
+			}
+			NOT = {
+				num_of_cities = 30
+			}
+			hre_leagues_enabled = no
+			hre_religion_treaty = no
+			hre_religion_locked = no
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+			}
+		}
+		effect = {
+			country_event = {
+				id = incident_denmark.1
+				days = 0
+				random = 0
+			}
+			set_country_flag = decisionjoinhre
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	DE_buy_gold_coast = {
+		major = yes
+		potential = {
+			ai = no
+			tag = DAN
+			is_colonial_nation = no
+			is_subject = no
+			1139 = {
+				is_city = yes
+				has_discovered = ROOT
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			NOT = {
+				has_country_flag = decisionbuygoldcoast
+			}
+		}
+		allow = {
+			1139 = {
+				#is_city = yes
+				NOT = {
+					controlled_by = REB
+				}
+				owner = {
+					is_at_war = no
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					1139 = {
+						owner = {
+							ai = yes
+						}
+					}
+				}
+				country_event = {
+					id = flavor_dan.24
+					days = 0
+					random = 0
+				}
+				set_country_flag = decisionbuygoldcoast
+			}
+			else = {
+				country_event = {
+					id = flavor_dan.26
+					days = 0
+					random = 0
+				}
+				set_country_flag = decisionbuygoldcoast
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

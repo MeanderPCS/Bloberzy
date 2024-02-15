@@ -1,0 +1,26 @@
+country_decisions = {
+	dual_order_donate_holy_see = {
+		potential = {
+			religion = catholic
+			OR = {
+				tag = TNR
+			}
+			NOT = {
+				has_country_flag = WFAS_donated_holy_see
+			}
+		}
+		allow = {
+			treasury = 500
+		}
+		effect = {
+			add_treasury = -500
+			add_curia_treasury = 500
+			add_prestige = 10
+			add_papal_influence = 25
+			set_country_flag = WFAS_donated_holy_see
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

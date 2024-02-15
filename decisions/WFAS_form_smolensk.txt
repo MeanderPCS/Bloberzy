@@ -1,0 +1,106 @@
+country_decisions = {
+	smolenskas_nation = {
+		major = yes
+		potential = {
+			NOT = {
+				exists = SMO
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_smolensk_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				tag = RUS
+			}
+			NOT = {
+				tag = PLC
+			}
+			NOT = {
+				tag = BEL
+			}
+			NOT = {
+				tag = PAP
+			}
+			OR = {
+				NOT = {
+					exists = SMO
+				}
+				ai = no
+			}
+			OR = {
+				primary_culture = byelorussian
+				primary_culture = ryazanian
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					province_id = 293					# Smolensk
+					province_id = 4245					# Vyazma
+				}
+				ROOT = {
+					NOT = {
+						owns_core_province = 293
+					}
+					NOT = {
+						owns_core_province = 4245
+					}
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				exists = SMO
+			}
+			religion = orthodox
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 293			# Smolensk
+			owns_core_province = 4245			# Vyazma
+		}
+		effect = {
+			add_prestige = 25
+			change_tag = SMO
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 1
+					}
+				}
+				set_government_rank = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			set_country_flag = formed_smolensk_flag
+			add_government_reform = principality
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

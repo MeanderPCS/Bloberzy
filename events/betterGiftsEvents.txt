@@ -1,0 +1,870 @@
+# Better Gifts Event
+# By giga moder Jakub Bober
+namespace = better_gifts
+country_event = {
+	id = better_gifts.1
+	title = "better_gifts.title.1"
+	desc = "better_gifts.desc.1"
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			treasury = 50
+		}
+		name = "better_gifts.1.a"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_5
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 50
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			treasury = 100
+		}
+		name = "better_gifts.1.b"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_10
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 100
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			treasury = 250
+		}
+		name = "better_gifts.1.c"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_15
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 250
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			treasury = 500
+		}
+		name = "better_gifts.1.d"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_20
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 500
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			treasury = 1000
+		}
+		name = "better_gifts.1.e"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_30
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 1000
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			treasury = 2000
+		}
+		name = "better_gifts.1.f"
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = askgift_tooltip
+		custom_tooltip = askgift_tooltip_opinion_50
+		hidden_effect = {
+			event_target:gift_addressee = {
+				set_variable = {
+					which = gift_option
+					value = 2000
+				}
+			}
+			event_target:gift_addressee = {
+				country_event = {
+					id = better_gifts.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = "better_gifts.1.g"
+		ai_chance = {
+			factor = 1
+		}
+		event_target:gift_addressee = {
+			clr_country_flag = BG_pending_gift_offer
+		}
+		clr_country_flag = BG_pending_gift_offer
+		clear_global_event_target = gift_sender
+		clear_global_event_target = gift_addressee
+		clr_global_flag = BG_someone_using_gift_option
+	}
+}
+
+#adressee options
+namespace = better_gifts
+country_event = {
+	id = better_gifts.2
+	title = "better_gifts.title.2"
+	desc = "better_gifts.desc.2"
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	after = {
+		clr_country_flag = BG_pending_gift_offer
+	}
+	immediate = {
+	}
+	option = {
+		name = "better_gifts.2.a"
+		custom_tooltip = accept_gift_tooltip
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				inflation = 30
+			}
+		}
+		hidden_effect = {
+			event_target:gift_sender = {
+				country_event = {
+					id = better_gifts.3
+					days = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 50
+				}
+			}
+			add_treasury = 50
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_small_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_decent_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_big_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_great_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_huge_gift
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:gift_sender
+					modifier = BG_tiny_gift
+				}
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 0.5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 0.25
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 0.12
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 0.06
+			}
+			event_target:gift_sender = {
+				add_treasury = -50
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 100
+				}
+			}
+			add_treasury = 100
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_small_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_small_gift
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_decent_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_big_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_great_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_huge_gift
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:gift_sender
+					modifier = BG_small_gift
+				}
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 1
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 0.5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 0.25
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 0.12
+			}
+			event_target:gift_sender = {
+				add_treasury = -100
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 250
+				}
+			}
+			add_treasury = 250
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_small_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_small_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_decent_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_decent_gift
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_big_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_great_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_huge_gift
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:gift_sender
+					modifier = BG_decent_gift
+				}
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 2.5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 1.25
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 0.62
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 0.3
+			}
+			event_target:gift_sender = {
+				add_treasury = -250
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 500
+				}
+			}
+			add_treasury = 500
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_small_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_small_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_decent_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_decent_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_big_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_big_gift
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_great_gift
+							}
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_huge_gift
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:gift_sender
+					modifier = BG_big_gift
+				}
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 2.5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 1.25
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 0.62
+			}
+			event_target:gift_sender = {
+				add_treasury = -500
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 1000
+				}
+			}
+			add_treasury = 1000
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_small_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_small_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_decent_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_decent_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_big_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_big_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_great_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_great_gift
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = event_target:gift_sender
+								modifier = BG_huge_gift
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = event_target:gift_sender
+					modifier = BG_great_gift
+				}
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 10
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 2.5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 1.25
+			}
+			event_target:gift_sender = {
+				add_treasury = -1000
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = {
+					which = gift_option
+					value = 2000
+				}
+			}
+			add_treasury = 2000
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_tiny_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_tiny_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_small_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_small_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_decent_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_decent_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_big_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_big_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_great_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_great_gift
+					}
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							who = event_target:gift_sender
+							modifier = BG_huge_gift
+						}
+					}
+					remove_opinion = {
+						who = event_target:gift_sender
+						modifier = BG_huge_gift
+					}
+				}
+			}
+			add_opinion = {
+				who = event_target:gift_sender
+				modifier = BG_huge_gift
+			}
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				add_inflation = 20
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				add_inflation = 10
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				add_inflation = 5
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				add_inflation = 2.5
+			}
+			event_target:gift_sender = {
+				add_treasury = -2000
+			}
+		}
+	}
+	option = {
+		name = "better_gifts.2.b"
+		ai_chance = {
+			factor = 1
+		}
+		custom_tooltip = refuse_gift_tooltip
+		hidden_effect = {
+			event_target:gift_sender = {
+				country_event = {
+					id = better_gifts.4
+					days = 0
+				}
+			}
+		}
+	}
+}
+
+#accapted
+namespace = better_gifts
+country_event = {
+	id = better_gifts.3
+	title = "better_gifts.title.3"
+	desc = "better_gifts.desc.3"
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	after = {
+		clr_country_flag = BG_pending_gift_offer
+		clear_global_event_target = gift_sender
+		clear_global_event_target = gift_addressee
+		clr_global_flag = BG_someone_using_gift_option
+	}
+	option = {
+		name = "better_gifts.3.a"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#rejected
+namespace = better_gifts
+country_event = {
+	id = better_gifts.4
+	title = "better_gifts.title.4"
+	desc = "better_gifts.desc.4"
+	picture = BANKRUPTCY_eventPicture
+	is_triggered_only = yes
+	after = {
+		clr_country_flag = BG_pending_gift_offer
+		clear_global_event_target = gift_sender
+		clear_global_event_target = gift_addressee
+		clr_global_flag = BG_someone_using_gift_option
+	}
+	option = {
+		name = "better_gifts.4.a"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

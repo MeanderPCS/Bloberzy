@@ -1,0 +1,991 @@
+namespace = eruption_of_huaynaputina
+normal_or_historical_nations = yes
+#Start - The begining of the Apocalypse
+country_event = {
+	id = eruption_of_huaynaputina.start
+	title = "eruption_of_huaynaputina.start.title"
+	desc = "eruption_of_huaynaputina.start.desc"
+	picture = EP_ISLAND_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "eruption_of_huaynaputina.start.a"
+		custom_tooltip = BLOBERS_huaynaputina_has_erupted.tooltip
+	}
+}
+
+#Price change - Food plants
+country_event = {
+	id = eruption_of_huaynaputina.1
+	title = "eruption_of_huaynaputina.1.title"
+	desc = "eruption_of_huaynaputina.1.desc"
+	picture = FARMING_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		is_month = 8
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		capital_scope = {
+			continent = europe
+		}
+		NOT = {
+			has_global_flag = BLOBERS_huaynaputina_food_prices
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	immediate = {
+		set_global_flag = BLOBERS_huaynaputina_food_prices
+	}
+	option = {
+		name = "eruption_of_huaynaputina.1.a"
+		add_country_modifier = {
+			name = "BLOBERS_first_failed_harvest"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		change_price = {
+			trade_goods = grain
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.75
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = cocoa
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.75
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = cotton
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.5
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = sugar
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.5
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = tobacco
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.5
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = wine
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.5
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = tea
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.3
+			duration = 7300
+		}
+	}
+	after = {
+		every_country = {
+			limit = {
+				has_disaster = BLOBERS_eruption_of_huaynaputina
+			}
+			set_country_flag = BLOBERS_huaynaputina_first_cold_winter
+			country_event = {
+				id = eruption_of_huaynaputina.2
+				days = 5
+				random = 10
+			}
+		}
+	}
+}
+
+#Price change - Food plants - all
+country_event = {
+	id = eruption_of_huaynaputina.2
+	title = "eruption_of_huaynaputina.2.title"
+	desc = "eruption_of_huaynaputina.2.desc"
+	picture = FARMING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = "eruption_of_huaynaputina.2.a"
+		add_country_modifier = {
+			name = "BLOBERS_first_failed_harvest"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+	}
+	after = {
+	}
+}
+
+#Price change - Animals
+country_event = {
+	id = eruption_of_huaynaputina.3
+	title = "eruption_of_huaynaputina.3.title"
+	desc = "eruption_of_huaynaputina.3.desc"
+	picture = FAMINE_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		is_month = 8
+		is_year = 1601
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		capital_scope = {
+			continent = europe
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	immediate = {
+		set_global_flag = BLOBERS_huaynaputina_food_prices_animals
+	}
+	option = {
+		name = "eruption_of_huaynaputina.3.a"
+		add_country_modifier = {
+			name = "BLOBERS_second_failed_harvest"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		change_price = {
+			trade_goods = livestock
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.75
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = wool
+			key = BLOBERS_eruption_of_huaynaputina
+			value = -0.75
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = fish
+			key = BLOBERS_eruption_of_huaynaputina
+			value = 0.7
+			duration = 7300
+		}
+		change_price = {
+			trade_goods = salt
+			key = BLOBERS_eruption_of_huaynaputina
+			value = 0.4
+			duration = 7300
+		}
+	}
+	after = {
+		every_country = {
+			limit = {
+				has_disaster = BLOBERS_eruption_of_huaynaputina
+			}
+			set_country_flag = BLOBERS_huaynaputina_second_cold_summer
+			country_event = {
+				id = eruption_of_huaynaputina.31
+				days = 5
+				random = 10
+			}
+		}
+	}
+}
+
+#Price change - Food plants - all
+country_event = {
+	id = eruption_of_huaynaputina.31
+	title = "eruption_of_huaynaputina.3.title"
+	desc = "eruption_of_huaynaputina.3.desc"
+	picture = FAMINE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		set_global_flag = BLOBERS_huaynaputina_food_prices_animals
+	}
+	option = {
+		name = "eruption_of_huaynaputina.3.a"
+		add_country_modifier = {
+			name = "BLOBERS_second_failed_harvest"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+	}
+	after = {
+	}
+}
+
+#3rd year - White ground and grey sky 
+country_event = {
+	id = eruption_of_huaynaputina.4
+	title = "eruption_of_huaynaputina.4.title"
+	desc = "eruption_of_huaynaputina.4.desc"
+	picture = EP_ISLAND_eventPicture
+	trigger = {
+		is_month = 3
+		is_year = 1602
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		NOT = {
+			has_country_flag = BLOBERS_third_failed_harvest_country
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_global_flag = BLOBERS_third_failed_harvest
+		set_country_flag = BLOBERS_third_failed_harvest_country
+	}
+	option = {
+		name = "eruption_of_huaynaputina.4.a"
+		add_country_modifier = {
+			name = "BLOBERS_third_year_unrest"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		hidden_effect = {
+			country_event = {
+				id = eruption_of_huaynaputina.5
+				days = 30
+				random = 30
+			}
+		}
+	}
+}
+
+#3rd year - Population Decreases
+country_event = {
+	id = eruption_of_huaynaputina.5
+	title = "eruption_of_huaynaputina.5.title"
+	desc = "eruption_of_huaynaputina.5.desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		set_country_flag = BLOBERS_third_year_population_decreases
+	}
+	option = {
+		name = "eruption_of_huaynaputina.5.a"
+		add_country_modifier = {
+			name = "BLOBERS_third_year_population_decreases"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		hidden_effect = {
+			country_event = {
+				id = eruption_of_huaynaputina.6
+				days = 30
+				random = 30
+			}
+		}
+	}
+}
+
+#3rd year - Toxic Ashes
+country_event = {
+	id = eruption_of_huaynaputina.6
+	title = "eruption_of_huaynaputina.6.title"
+	desc = "eruption_of_huaynaputina.6.desc"
+	picture = PLAGUE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		set_country_flag = BLOBERS_third_year_toxic_ashes
+	}
+	option = {
+		name = "eruption_of_huaynaputina.6.a"
+		add_country_modifier = {
+			name = "BLOBERS_third_year_toxic_ashes"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		custom_tooltip = BLOBERS_huaynaputina_devastation.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				add_devastation = 10
+			}
+			country_event = {
+				id = eruption_of_huaynaputina.7
+				days = 30
+				random = 30
+			}
+		}
+	}
+}
+
+#3rd year - Collapsing Economy
+country_event = {
+	id = eruption_of_huaynaputina.7
+	title = "eruption_of_huaynaputina.7.title"
+	desc = "eruption_of_huaynaputina.7.desc"
+	picture = BANKRUPTCY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = BLOBERS_third_year_collapsing_economy
+		}
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		set_country_flag = BLOBERS_third_year_collapsing_economy
+	}
+	option = {
+		name = "eruption_of_huaynaputina.7.a"
+		add_country_modifier = {
+			name = "BLOBERS_third_year_collapsing_economy"
+			duration = -1
+			desc = "BLOBERS_END_OF_DARK_SKY"
+		}
+		hidden_effect = {
+			country_event = {
+				id = eruption_of_huaynaputina.7
+				days = 30
+				random = 30
+			}
+		}
+	}
+}
+
+#Toxic Ashes - forest on fire
+country_event = {
+	id = eruption_of_huaynaputina.8
+	title = "eruption_of_huaynaputina.8.title"
+	desc = "eruption_of_huaynaputina.8.desc"
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes
+	goto = BLOBERS_eruption_of_huaynaputina_event_province
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_terrain = farmlands
+				has_terrain = forest
+				has_terrain = drylands
+				has_terrain = hills
+				has_terrain = woods
+				has_terrain = marsh
+				has_terrain = grasslands
+				has_terrain = jungle
+				has_terrain = coastline
+				has_terrain = highlands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		has_country_flag = BLOBERS_third_year_toxic_ashes
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = farmlands
+						has_terrain = forest
+						has_terrain = drylands
+						has_terrain = hills
+						has_terrain = woods
+						has_terrain = marsh
+						has_terrain = grasslands
+						has_terrain = jungle
+						has_terrain = coastline
+						has_terrain = highlands
+						has_terrain = savannah
+						has_terrain = steppe
+					}
+				}
+				save_event_target_as = BLOBERS_eruption_of_huaynaputina_event_province
+			}
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.8.a"
+		trigger = {
+			NOT = {
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		event_target:BLOBERS_eruption_of_huaynaputina_event_province = {
+			add_devastation = 25
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.8.a"
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_food.tooltip
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		event_target:BLOBERS_eruption_of_huaynaputina_event_province = {
+			add_devastation = 10
+			add_base_production = -1
+		}
+	}
+}
+
+#Toxic Ashes - robbers burns workshop to the ground
+country_event = {
+	id = eruption_of_huaynaputina.9
+	title = "eruption_of_huaynaputina.9.title"
+	desc = "eruption_of_huaynaputina.9.desc"
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes
+	goto = BLOBERS_eruption_of_huaynaputina_event_province
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
+		}
+		has_country_flag = BLOBERS_third_year_toxic_ashes
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+				save_event_target_as = BLOBERS_eruption_of_huaynaputina_event_province
+			}
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.9.a"
+		event_target:BLOBERS_eruption_of_huaynaputina_event_province = {
+			add_base_production = -1
+			if = {
+				limit = {
+					has_building = workshop
+				}
+				remove_building = workshop
+			}
+			if = {
+				limit = {
+					has_building = counting_house
+				}
+				remove_building = counting_house
+			}
+		}
+	}
+}
+
+#Toxic Ashes - toxic lake
+country_event = {
+	id = eruption_of_huaynaputina.10
+	title = "eruption_of_huaynaputina.10.title"
+	desc = "eruption_of_huaynaputina.10.desc"
+	picture = PLAGUE_eventPicture
+	is_triggered_only = yes
+	goto = BLOBERS_eruption_of_huaynaputina_event_province
+	trigger = {
+		has_country_flag = BLOBERS_third_year_toxic_ashes
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = BLOBERS_eruption_of_huaynaputina_event_province
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		name = "eruption_of_huaynaputina.10.a"
+		event_target:BLOBERS_eruption_of_huaynaputina_event_province = {
+			add_base_manpower = -4
+		}
+		add_manpower = -4
+	}
+	option = {
+		name = "eruption_of_huaynaputina.10.a"
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_food.tooltip
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		event_target:BLOBERS_eruption_of_huaynaputina_event_province = {
+			add_base_manpower = -2
+		}
+		add_manpower = -2
+	}
+}
+
+#3rd year - we can trust no one
+country_event = {
+	id = eruption_of_huaynaputina.11
+	title = "eruption_of_huaynaputina.11.title"
+	desc = "eruption_of_huaynaputina.11.desc"
+	picture = CIVIL_WAR_eventPicture
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		NOT = {
+			has_country_flag = BLOBERS_huaynaputina_cb_add
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_country_flag = BLOBERS_huaynaputina_cb_add
+		set_country_flag = BLOBERS_huaynaputina_has_food
+	}
+	option = {
+		name = "eruption_of_huaynaputina.11.a"
+		custom_tooltip = BLOBERS_huaynaputina_food_raids.tooltip
+	}
+}
+
+#ally peasent raid
+country_event = {
+	id = eruption_of_huaynaputina.12
+	title = "eruption_of_huaynaputina.12.title"
+	desc = "eruption_of_huaynaputina.12.desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		any_ally = {
+			is_at_war = no
+			has_country_flag = BLOBERS_huaynaputina_has_food
+		}
+	}
+	immediate = {
+		set_country_flag = BLOBERS_peasents_food_raid
+		random_ally = {
+			limit = {
+				NOT = {
+					has_country_flag = BLOBERS_peasents_food_raid
+				}
+				has_country_flag = BLOBERS_huaynaputina_has_food
+				is_at_war = no
+			}
+			save_event_target_as = BLOBERS_peasents_raid
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.12.a"
+		custom_tooltip = BLOBERS_huaynaputina_peasents_raids.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					event_target:BLOBERS_peasents_raid = {
+						country_event = {
+							id = eruption_of_huaynaputina.13
+						}
+					}
+					hidden_effect = {
+						country_event = {
+							id = eruption_of_huaynaputina.15
+						}
+					}
+				}
+				90 = {
+					event_target:BLOBERS_peasents_raid = {
+						country_event = {
+							id = eruption_of_huaynaputina.14
+						}
+					}
+					hidden_effect = {
+						country_event = {
+							id = eruption_of_huaynaputina.16
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#ally peasent raid success
+country_event = {
+	id = eruption_of_huaynaputina.13
+	title = "eruption_of_huaynaputina.13.title"
+	desc = "eruption_of_huaynaputina.13.desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_country_flag = BLOBERS_huaynaputina_has_food
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	option = {
+		name = "eruption_of_huaynaputina.13.a"
+		add_opinion = {
+			who = FROM
+			modifier = BLOBERS_food_raid_opinion
+		}
+		custom_tooltip = BLOBERS_huaynaputina_peasents_raids_lost_food.tooltip
+		hidden_effect = {
+			clr_country_flag = BLOBERS_huaynaputina_has_food
+		}
+	}
+}
+
+#ally peasent raid fail
+country_event = {
+	id = eruption_of_huaynaputina.14
+	title = "eruption_of_huaynaputina.14.title"
+	desc = "eruption_of_huaynaputina.14.desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_country_flag = BLOBERS_huaynaputina_has_food
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	option = {
+		add_opinion = {
+			who = FROM
+			modifier = BLOBERS_food_raid_opinion
+		}
+		custom_tooltip = BLOBERS_huaynaputina_peasents_raids_keep_food.tooltip
+		name = "eruption_of_huaynaputina.14.a"
+	}
+}
+
+#peasents manage to steal food
+country_event = {
+	id = eruption_of_huaynaputina.15
+	title = "eruption_of_huaynaputina.15.title"
+	desc = "eruption_of_huaynaputina.15.desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	option = {
+		name = "eruption_of_huaynaputina.15.a"
+		custom_tooltip = BLOBERS_huaynaputina_peasents_raids_stolen_food.tooltip
+		hidden_effect = {
+			clr_country_flag = BLOBERS_peasents_food_raid
+			set_country_flag = BLOBERS_huaynaputina_has_food
+		}
+	}
+}
+
+#ally peasent raid fail
+country_event = {
+	id = eruption_of_huaynaputina.16
+	title = "eruption_of_huaynaputina.16.title"
+	desc = "eruption_of_huaynaputina.16.desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_country_flag = BLOBERS_huaynaputina_has_food
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	option = {
+		name = "eruption_of_huaynaputina.16.a"
+		hidden_effect = {
+			clr_country_flag = BLOBERS_peasents_food_raid
+		}
+		add_prestige = -10
+	}
+}
+
+#canibalism in province
+country_event = {
+	id = eruption_of_huaynaputina.17
+	title = "eruption_of_huaynaputina.17.title"
+	desc = "eruption_of_huaynaputina.17.desc"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = BLOBERS_cannibals
+				}
+			}
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.17.a"
+		random_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = BLOBERS_cannibals
+				}
+			}
+			add_province_modifier = {
+				name = BLOBERS_cannibals
+				duration = 3650
+			}
+			add_base_production = -3
+		}
+	}
+}
+
+#is a god with us?
+country_event = {
+	id = eruption_of_huaynaputina.18
+	title = "eruption_of_huaynaputina.18.title"
+	desc = "eruption_of_huaynaputina.18.desc"
+	picture = PRAYING_eventPicture
+	trigger = {
+		is_year = 1607
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		NOT = {
+			has_country_flag = BLOBERS_huaynaputina_old_gods_start
+		}
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+		}
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+	option = {
+		name = "eruption_of_huaynaputina.18.a"
+		hidden_effect = {
+			set_country_flag = BLOBERS_huaynaputina_old_gods_start
+			country_event = {
+				id = eruption_of_huaynaputina.19
+				days = 60
+				random = 30
+			}
+		}
+		custom_tooltip = BLOBERS_huaynaputina_god_answear.tooltip
+		add_treasury = -1000
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.18.b"
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#old gods
+country_event = {
+	id = eruption_of_huaynaputina.19
+	title = "eruption_of_huaynaputina.19.title"
+	desc = "eruption_of_huaynaputina.19.desc"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		is_year = 1607
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		NOT = {
+			has_country_flag = BLOBERS_huaynaputina_old_gods
+		}
+		has_country_flag = BLOBERS_huaynaputina_old_gods_start
+	}
+	immediate = {
+		set_country_flag = BLOBERS_huaynaputina_old_gods
+	}
+	option = {
+		name = "eruption_of_huaynaputina.19.a"
+		add_country_modifier = {
+			name = BLOBERS_punish_heretics
+			duration = -1
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.19.b"
+		change_religion = shamanism
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.19.c"
+		change_religion = totemism
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.19.d"
+		change_religion = tengri_pagan_reformed
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.19.e"
+		change_religion = norse_pagan_reformed
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#jews are guilty
+country_event = {
+	id = eruption_of_huaynaputina.20
+	title = "eruption_of_huaynaputina.20.title"
+	desc = "eruption_of_huaynaputina.20.desc"
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+		}
+		NOT = {
+			has_country_flag = BLOBERS_jews_guilty
+		}
+	}
+	immediate = {
+		set_country_flag = BLOBERS_jews_guilty
+	}
+	option = {
+		name = "eruption_of_huaynaputina.20.a"
+		random_owned_province = {
+			jewish_rebels = 3
+			add_base_tax = -1
+			add_base_production = -1
+		}
+		add_country_modifier = {
+			name = BLOBERS_jews_expelled
+			duration = 7300
+		}
+		add_treasury = 100
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.20.b"
+		add_country_modifier = {
+			name = BLOBERS_protecting_jews
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#end and bonuses
+country_event = {
+	id = eruption_of_huaynaputina.22
+	title = "eruption_of_huaynaputina.22.title"
+	desc = "eruption_of_huaynaputina.22.desc"
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "eruption_of_huaynaputina.22.a"
+		trigger = {
+			NOT = {
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		hidden_effect = {
+			remove_country_modifier = BLOBERS_first_failed_harvest
+			remove_country_modifier = BLOBERS_second_failed_harvest
+			remove_country_modifier = BLOBERS_third_year_unrest
+			remove_country_modifier = BLOBERS_third_year_population_decreases
+			remove_country_modifier = BLOBERS_third_year_toxic_ashes
+			remove_country_modifier = BLOBERS_third_year_collapsing_economy
+			remove_country_modifier = BLOBERS_protecting_jews
+			remove_country_modifier = BLOBERS_jews_expelled
+			clr_country_flag = BLOBERS_huaynaputina_first_cold_winter
+			clr_country_flag = BLOBERS_huaynaputina_food_prices_animals
+			clr_country_flag = BLOBERS_third_failed_harvest
+			clr_country_flag = BLOBERS_third_failed_harvest_country
+			clr_country_flag = BLOBERS_third_year_population_decreases
+			clr_country_flag = BLOBERS_third_year_toxic_ashes
+			clr_country_flag = BLOBERS_third_year_collapsing_economy
+			clr_country_flag = BLOBERS_huaynaputina_cb_add
+			clr_country_flag = BLOBERS_huaynaputina_has_food
+		}
+		add_country_modifier = {
+			name = BLOBERS_huaynaputina_ended
+			duration = -1
+		}
+	}
+	option = {
+		name = "eruption_of_huaynaputina.22.a"
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_food.tooltip
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+		add_country_modifier = {
+			name = BLOBERS_huaynaputina_ended_food
+			duration = -1
+		}
+		hidden_effect = {
+			remove_country_modifier = BLOBERS_first_failed_harvest
+			remove_country_modifier = BLOBERS_second_failed_harvest
+			remove_country_modifier = BLOBERS_third_year_unrest
+			remove_country_modifier = BLOBERS_third_year_population_decreases
+			remove_country_modifier = BLOBERS_third_year_toxic_ashes
+			remove_country_modifier = BLOBERS_third_year_collapsing_economy
+			remove_country_modifier = BLOBERS_protecting_jews
+			remove_country_modifier = BLOBERS_jews_expelled
+			clr_country_flag = BLOBERS_huaynaputina_first_cold_winter
+			clr_country_flag = BLOBERS_huaynaputina_food_prices_animals
+			clr_country_flag = BLOBERS_third_failed_harvest
+			clr_country_flag = BLOBERS_third_failed_harvest_country
+			clr_country_flag = BLOBERS_third_year_population_decreases
+			clr_country_flag = BLOBERS_third_year_toxic_ashes
+			clr_country_flag = BLOBERS_third_year_collapsing_economy
+			clr_country_flag = BLOBERS_huaynaputina_cb_add
+			clr_country_flag = BLOBERS_huaynaputina_has_food
+		}
+	}
+}
+
+#end of disaster (hidden)
+country_event = {
+	id = eruption_of_huaynaputina.21
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		is_year = 1620
+	}
+	option = {
+		set_country_flag = BLOBERS_huaynaputina_disaster_ended
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

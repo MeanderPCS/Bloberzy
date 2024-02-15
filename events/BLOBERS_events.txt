@@ -1,0 +1,410 @@
+namespace = BLOBERS
+country_event = {
+	id = BLOBERS.1
+	title = "BLOBERS.1.t"
+	desc = "BLOBERS.1.d"
+	picture = CHRISTIAN_ANIMIST_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_building = temple
+				controlled_by = ROOT
+			}
+			set_province_flag = BLOBERS_church_flag
+		}
+		every_owned_province = {
+			limit = {
+				has_building = cathedral
+				controlled_by = ROOT
+			}
+			set_province_flag = BLOBERS_cathedral_flag
+		}
+	}
+	option = {
+		name = "BLOBERS.1.a"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_church_flag
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_churches.tooltip
+		custom_tooltip = BLOBERS_secularisation_in.tooltip
+		hidden_effect = {
+			country_event = {
+				id = BLOBERS.2
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.1.b"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_cathedral_flag
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_cathedrals.tooltip
+		custom_tooltip = BLOBERS_secularisation_in.tooltip
+		hidden_effect = {
+			country_event = {
+				id = BLOBERS.3
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.1.c"
+		custom_tooltip = BLOBERS_secularisation_end.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+		}
+	}
+}
+
+#remove churches
+country_event = {
+	id = BLOBERS.2
+	title = "BLOBERS.2.t"
+	desc = "BLOBERS.2.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			limit = {
+				owned_by = ROOT
+				has_province_flag = BLOBERS_church_flag
+			}
+			save_event_target_as = BLOBERS_remove_church
+		}
+	}
+	goto = BLOBERS_remove_church
+	option = {
+		name = "BLOBERS.2.a"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_church_flag
+			}
+		}
+		event_target:BLOBERS_remove_church = {
+			remove_building = temple
+			clr_province_flag = BLOBERS_church_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+			country_event = {
+				id = BLOBERS.5
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.2.b"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_church_flag
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_next.tooltip
+		hidden_effect = {
+			event_target:BLOBERS_remove_church = {
+				clr_province_flag = BLOBERS_church_flag
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_flag = BLOBERS_church_flag
+					}
+				}
+				country_event = {
+					id = BLOBERS.5
+				}
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.2.c"
+		custom_tooltip = BLOBERS_secularisation_end.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+		}
+	}
+	after = {
+		clear_global_event_target = BLOBERS_remove_church
+	}
+}
+
+country_event = {
+	id = BLOBERS.5
+	title = "BLOBERS.2.t"
+	desc = "BLOBERS.2.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			limit = {
+				owned_by = ROOT
+				has_province_flag = BLOBERS_church_flag
+			}
+			save_event_target_as = BLOBERS_remove_church
+		}
+	}
+	goto = BLOBERS_remove_church
+	option = {
+		name = "BLOBERS.2.a"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_church_flag
+			}
+		}
+		event_target:BLOBERS_remove_church = {
+			remove_building = temple
+			clr_province_flag = BLOBERS_church_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+			country_event = {
+				id = BLOBERS.2
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.2.b"
+		trigger = {
+			any_owned_province = {
+				has_province_flag = BLOBERS_church_flag
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_next.tooltip
+		hidden_effect = {
+			event_target:BLOBERS_remove_church = {
+				clr_province_flag = BLOBERS_church_flag
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_flag = BLOBERS_church_flag
+					}
+				}
+				country_event = {
+					id = BLOBERS.2
+				}
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.2.c"
+		custom_tooltip = BLOBERS_secularisation_end.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+		}
+	}
+	after = {
+		clear_global_event_target = BLOBERS_remove_church
+	}
+}
+
+#remove cathedrals
+country_event = {
+	id = BLOBERS.3
+	title = "BLOBERS.3.t"
+	desc = "BLOBERS.3.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			limit = {
+				owned_by = ROOT
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+			save_event_target_as = BLOBERS_remove_temple
+		}
+	}
+	goto = BLOBERS_remove_temple
+	option = {
+		name = "BLOBERS.3.a"
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+		}
+		event_target:BLOBERS_remove_temple = {
+			remove_building = cathedral
+			remove_building = temple
+			clr_province_flag = BLOBERS_cathedral_flag
+			clr_province_flag = BLOBERS_church_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						has_province_flag = BLOBERS_cathedral_flag
+						has_province_flag = BLOBERS_church_flag
+					}
+				}
+			}
+			country_event = {
+				id = BLOBERS.4
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.3.b"
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_next.tooltip
+		hidden_effect = {
+			event_target:BLOBERS_remove_temple = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							has_province_flag = BLOBERS_cathedral_flag
+							has_province_flag = BLOBERS_church_flag
+						}
+					}
+				}
+				country_event = {
+					id = BLOBERS.4
+				}
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.3.c"
+		custom_tooltip = BLOBERS_secularisation_end.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+		}
+	}
+	after = {
+		clear_global_event_target = BLOBERS_remove_temple
+	}
+}
+
+country_event = {
+	id = BLOBERS.4
+	title = "BLOBERS.3.t"
+	desc = "BLOBERS.3.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			limit = {
+				owned_by = ROOT
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+			save_event_target_as = BLOBERS_remove_temple
+		}
+	}
+	goto = BLOBERS_remove_temple
+	option = {
+		name = "BLOBERS.3.a"
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+		}
+		event_target:BLOBERS_remove_temple = {
+			remove_building = cathedral
+			remove_building = temple
+			clr_province_flag = BLOBERS_cathedral_flag
+			clr_province_flag = BLOBERS_church_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						has_province_flag = BLOBERS_cathedral_flag
+						has_province_flag = BLOBERS_church_flag
+					}
+				}
+			}
+			country_event = {
+				id = BLOBERS.3
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.3.b"
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_province_flag = BLOBERS_cathedral_flag
+					has_province_flag = BLOBERS_church_flag
+				}
+			}
+		}
+		custom_tooltip = BLOBERS_secularisation_next.tooltip
+		hidden_effect = {
+			event_target:BLOBERS_remove_temple = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							has_province_flag = BLOBERS_cathedral_flag
+							has_province_flag = BLOBERS_church_flag
+						}
+					}
+				}
+				country_event = {
+					id = BLOBERS.3
+				}
+			}
+		}
+	}
+	option = {
+		name = "BLOBERS.3.c"
+		custom_tooltip = BLOBERS_secularisation_end.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = BLOBERS_cathedral_flag
+				clr_province_flag = BLOBERS_church_flag
+			}
+		}
+	}
+	after = {
+		clear_global_event_target = BLOBERS_remove_temple
+	}
+}
