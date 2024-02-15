@@ -1,0 +1,8 @@
+WFAS_ukraine_insult_cossacks = {
+	trigger = {
+		FROM = {
+			tag = ZAZ
+		}
+		tag = TUR
+	}
+}

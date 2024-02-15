@@ -1,0 +1,32 @@
+BLOBERS_huaynaputina_food_raids = {
+	valid_for_subject = no
+	prerequisites = {
+		ROOT = {
+			has_disaster = BLOBERS_eruption_of_huaynaputina
+			has_country_flag = BLOBERS_huaynaputina_cb_add
+		}
+		FROM = {
+			total_development = 300
+			has_country_flag = BLOBERS_huaynaputina_has_food
+		}
+	}
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_revoke_cores
+		po_return_cores
+		po_release_vassals
+		po_release_annexed
+		po_become_tributary_state
+		po_subjugate_tributary_state
+		po_form_personal_union
+		po_transfer_vassals
+		po_change_religion
+		po_change_government
+		po_revoke_elector
+		po_become_vassal
+		po_subjugate_tributary_state
+		po_subjugate_vassal
+		po_become_tributary_state
+	}
+	war_goal = BLOBERS_huaynaputina_raid
+}

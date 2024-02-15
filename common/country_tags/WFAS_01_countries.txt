@@ -1,0 +1,7 @@
+# Special countries..
+AUH = "countries/HabsburgMonarchy.txt"
+TNR = "countries/NewOrder.txt"
+RAT = "countries/AutonomousRussianTerritories.txt"
+BEL = "countries/WhiteRuthenia.txt"
+DON = "countries/DonCossacks.txt"
+BAC = "countries/Berberia.txt"

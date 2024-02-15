@@ -1,0 +1,127 @@
+#Get a Colonial Nation in X colonial region
+estate_burghers_colonial_nation = {
+	can_select = {
+		always = no
+		num_of_colonists = 100
+		num_of_ports = 10000
+		any_owned_province = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+			}
+			NOT = {
+				calc_true_if = {
+					amount = 5
+					colonial_region_for_scope_province = {
+						type = all
+						country_or_non_sovereign_subject_holds = root
+					}
+				}
+			}
+			calc_true_if = {
+				amount = 3
+				colonial_region_for_scope_province = {
+					type = all
+					country_or_non_sovereign_subject_holds = root
+					is_city = yes
+				}
+			}
+			OR = {
+				NOT = { colonial_claim_by_anyone_of_religion = root }
+				is_religion_grant_colonial_claim = root
+			}
+		}
+		NOT = { has_country_modifier = agenda_colonial_administration }
+	}
+	selection_weight = {
+		factor = 2.5
+		modifier = {
+			factor = 2
+			OR = {
+				tag = POR
+				tag = CAS
+				tag = GBR
+				tag = NED
+				tag = FRA
+				tag = NAV
+				tag = DAN
+				tag = NOR
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+		modifier = {
+			factor = 1.5
+			any_country = {
+				is_colonial_nation_of = root
+			}
+		}
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = new_world
+				}
+				NOT = {
+					calc_true_if = {
+						amount = 5
+						colonial_region_for_scope_province = {
+							type = all
+							country_or_non_sovereign_subject_holds = root
+						}
+					}
+				}
+				calc_true_if = {
+					amount = 3
+					colonial_region_for_scope_province = {
+						type = all
+						country_or_non_sovereign_subject_holds = root
+						is_city = yes
+					}
+				}
+				OR = {
+					NOT = { colonial_claim_by_anyone_of_religion = root }
+					is_religion_grant_colonial_claim = root
+				}
+			}
+			save_event_target_as = agenda_province
+		}
+	}
+	provinces_to_highlight = {
+		colonial_region = event_target:agenda_province
+	}
+	task_requirements = {
+		custom_trigger_tooltip = {
+			tooltip = estate_burghers_colonial_nation_requirements_tooltip
+			any_subject_country = {
+				is_colonial_nation_of = root
+				capital_scope = { colonial_region = event_target:agenda_province }
+				num_of_cities = 5
+			}
+		}
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = agenda_colonial_administration
+			duration = 5475
+		}
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}

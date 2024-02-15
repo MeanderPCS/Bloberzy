@@ -1,0 +1,78 @@
+WFAS_estate_nomadic_tribes_focus_on_infantry_quality = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.15
+	is_valid = {
+		has_estate = estate_nomadic_tribes
+		NOT = {
+			religion_group = pagan
+		}
+	}
+	can_select = {
+		has_estate = estate_nomadic_tribes
+		NOT = {
+			has_estate_privilege = WFAS_estate_nomadic_tribes_focus_on_cavalry_quality
+		}
+	}
+	benefits = {
+		infantry_power = 0.15
+	}
+	penalties = {
+		infantry_cost = 0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+WFAS_estate_nomadic_tribes_focus_on_cavalry_quality = {
+	icon = privilege_spawn_rajput_regiments
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.15
+	is_valid = {
+		has_estate = estate_nomadic_tribes
+	}
+	can_select = {
+		NOT = {
+			religion_group = pagan
+		}
+		has_estate = estate_nomadic_tribes
+		NOT = {
+			has_estate_privilege = WFAS_estate_nomadic_tribes_focus_on_infantry_quality
+		}
+	}
+	benefits = {
+		cavalry_power = 0.1
+	}
+	penalties = {
+		cavalry_cost = 0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+WFAS_estate_nomadic_tribes_heathens_tolerance_policy = {
+	icon = privilege_promoto_dhimmi_nobles
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.15
+	is_valid = {
+		has_estate = estate_nomadic_tribes
+	}
+	can_select = {
+		has_estate = estate_nomadic_tribes
+	}
+	benefits = {
+		tolerance_heathen = 1
+		global_unrest = -2
+	}
+	penalties = {
+		global_heathen_missionary_strength = -0.01
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

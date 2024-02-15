@@ -1,0 +1,79 @@
+BLOBERS_vassalize_player_option = {
+	category = covert
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		FROM = {
+			ai = no
+		}
+		NOT = {
+			border_distance = {
+				who = FROM
+				distance = 100
+			}
+		}
+	}
+	# Determines when the action can be taken
+	is_allowed = {
+		NOT = {
+			war_with = FROM
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		has_spy_network_in = {
+			who = FROM
+			value = 75
+		}
+		FROM = {
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				NOT = {
+					total_development = 200
+				}
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				NOT = {
+					total_development = 400
+				}
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				NOT = {
+					total_development = 600
+				}
+			}
+			else_if = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				NOT = {
+					total_development = 800
+				}
+			}
+		}
+	}
+	# Which effects to execute on acceptance
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -75
+		}
+		add_casus_belli = {
+			target = FROM
+			type = BLOBERS_player_vassalization
+			months = 120
+		}
+	}
+	# Controls the AI's usage of the action
+	ai_will_do = {
+		always = no
+	}
+}

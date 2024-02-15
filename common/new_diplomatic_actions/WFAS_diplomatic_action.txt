@@ -1,0 +1,38 @@
+WFAS_remove_protectorate = {
+    category = influence         
+    
+    require_acceptance = no   # Whether the action needs to be accepted by the target country for the accept effect to execute.
+    
+    # Determines when the action is visible
+    is_visible = {
+        overlord_of = FROM
+	FROM = {
+		is_subject_of_type = WFAS_protectorate
+	}
+    }
+    
+    # Determines when the action can be taken
+    is_allowed = {
+	is_at_war = no
+	overlord_of = FROM
+	FROM = {
+		is_subject_of_type = WFAS_protectorate
+		is_at_war = no
+	}
+   }
+    
+    # Which effects to execute on acceptance
+    on_accept = {
+	add_stability = -1
+        create_subject = {
+    		subject_type = march
+    		subject = FROM
+	}
+    }
+    
+    
+    # Controls the AI's usage of the action
+    ai_will_do = {
+        always = no
+    }
+}

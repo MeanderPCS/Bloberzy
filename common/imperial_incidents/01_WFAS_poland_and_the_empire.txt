@@ -1,0 +1,78 @@
+incident_poland_and_the_empire = {
+	event = WFAS_incident_poland_and_the_empire.2
+	default_option = 0
+	can_stop = {
+		OR = {
+			AND = {
+				NOT = {
+					exists = PLC
+				}
+				NOT = {
+					exists = POL
+				}
+			}
+			NOT = {
+				exists = BOH
+			}
+			NOT = {
+				hre_size = 1
+				NOT = {
+					exists = HLR
+				}
+			}
+		}
+	}
+	0 = {
+		factor = 10
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_rebellious
+				}
+			}
+		}
+	}
+	1 = {
+		# denied
+		factor = 5
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = PLC
+					attitude = attitude_allied
+				}
+			}
+		}
+	}
+}

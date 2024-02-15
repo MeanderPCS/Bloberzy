@@ -1,0 +1,40 @@
+Our_MOD_BOH_ideas = {
+	start = {
+		imperial_authority = 0.10
+		advisor_cost = -0.10
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = BOH
+	}
+	free = yes
+	
+	compacta_of_prague = {
+		tolerance_heretic = 3
+	}
+	boh_elective_monarchy = {
+		legitimacy = 1
+	}
+	wagenburg = {
+		infantry_power = 0.10
+		shock_damage_received = -0.15
+	}
+	letter_of_majesty = {
+		global_unrest = -1
+	}
+	hussite_legacy = {
+		technology_cost = -0.1
+		land_morale = 0.10		
+	}
+	kutnohorian_deal = {
+		stability_cost_modifier = -0.10
+	}
+	czech_nationalism = {
+		same_culture_advisor_cost = -0.25
+		culture_conversion_cost = -0.25
+	}
+}

@@ -1,0 +1,17 @@
+WFAS_establish_order_banners = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.05
+	is_valid = {
+		has_estate_privilege = WFAS_establish_order_banners
+	}
+	modifier_by_land_ownership = {
+		land_maintenance_modifier = 0.25
+		discipline = 0.1
+		land_forcelimit_modifier = 0.5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

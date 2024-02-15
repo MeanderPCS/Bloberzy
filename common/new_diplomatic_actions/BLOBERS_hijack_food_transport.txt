@@ -1,0 +1,53 @@
+BLOBERS_hijack_food_transport_option = {
+	category = covert
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_country_flag = BLOBERS_third_failed_harvest_country
+		has_disaster = BLOBERS_eruption_of_huaynaputina
+		NOT = {
+			border_distance = {
+				who = FROM
+				distance = 100
+			}
+		}
+	}
+	# Determines when the action can be taken
+	is_allowed = {
+		NOT = {
+			war_with = FROM
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		has_spy_network_in = {
+			who = FROM
+			value = 100
+		}
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_food.tooltip
+				has_country_flag = BLOBERS_huaynaputina_has_food
+			}
+			total_development = 600
+		}
+	}
+	# Which effects to execute on acceptance
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -100
+		}
+		custom_tooltip = BLOBERS_huaynaputina_spy_lose_food.tooltip
+		custom_tooltip = BLOBERS_huaynaputina_spy_get_food.tooltip
+		hidden_effect = {
+			set_country_flag = BLOBERS_huaynaputina_has_food
+			FROM = {
+				clr_country_flag = BLOBERS_huaynaputina_has_food
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

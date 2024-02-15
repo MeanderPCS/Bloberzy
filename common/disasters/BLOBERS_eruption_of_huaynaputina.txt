@@ -1,0 +1,58 @@
+BLOBERS_eruption_of_huaynaputina = {
+	potential = {
+		is_year = 1600
+		NOT = {
+			has_country_flag = BLOBERS_huaynaputina_disaster_ended
+		}
+	}
+	can_start = {
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = BLOBERS_huaynaputina_disaster_ended
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = BLOBERS_huaynaputina_has_erupted
+			has_global_flag = BLOBERS_huaynaputina_erupted
+		}
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		modifier = {
+			factor = 20
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_has_erupted
+				has_global_flag = BLOBERS_huaynaputina_erupted
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			is_year = 1625
+			custom_trigger_tooltip = {
+				tooltip = BLOBERS_huaynaputina_impatct_ended
+				has_country_flag = BLOBERS_huaynaputina_disaster_ended
+			}
+		}
+	}
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			50 = eruption_of_huaynaputina.8			#fire in forest
+			10 = eruption_of_huaynaputina.9			#robbers in workshop
+			50 = eruption_of_huaynaputina.10			#toxic lake
+			100 = eruption_of_huaynaputina.12			#people raid ally
+			10 = eruption_of_huaynaputina.17			#cannibalism
+			50 = eruption_of_huaynaputina.20			#jews are guilty
+		}
+	}
+	modifier = {
+		global_monthly_devastation = 0.1
+	}
+	on_start = eruption_of_huaynaputina.start
+	on_end = eruption_of_huaynaputina.22
+}

@@ -1,0 +1,24 @@
+bookmark =
+{
+	name = "WITH_FIRE_AND_SWORD"
+	desc = "WITH_FIRE_AND_SWORD_DESC"
+	date = 1444.11.11
+	
+	center = 4115
+	default = yes
+	
+	country = POL
+	country = MOS
+	country = LIT
+	country = TEU
+	country = LIV	
+	country = SWE
+	country = HUN
+	country = CRI
+	country = RYA
+	country = GEO	
+	country = GOL
+	
+	easy_country = POL
+	easy_country = MOS
+}

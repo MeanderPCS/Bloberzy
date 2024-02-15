@@ -1,0 +1,67 @@
+incident_denmark_in_empire = {
+	event = incident_denmark.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				exists = DAN
+			}
+			DAN = { is_subject = yes }
+		}
+	}
+	
+	0 = { # denmark joins
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_allied
+				}
+			}
+		}
+	}
+	
+	1 = { # denied
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = DAN
+					attitude = attitude_rebellious
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+WFAS_orders_TNR_ideas = {
+	start = {
+		infantry_power = 0.1
+		global_missionary_strength = 0.02
+	}
+	bonus = {
+		defensiveness = 0.33
+	}
+	trigger = {
+		tag = TNR
+	}
+	free = yes
+	WFAS_orders_land_seizure = {
+		unjustified_demands = -0.5
+		core_creation = -0.1
+	}
+	WFAS_orders_catholic_stronghold = {
+		global_religious_conversion_resistance = 0.5
+		devotion = 0.5
+		papal_influence = 2
+	}
+	WFAS_orders_strict_army = {
+		land_morale = 0.15
+	}
+	WFAS_orders_desecularization = {
+		global_autonomy = -0.05
+		max_absolutism = 20
+	}
+	WFAS_orders_church_owned_production = {
+		production_efficiency = 0.15
+	}
+	WFAS_orders_knights_to_musketeers = {
+		fire_damage = 0.1
+		discipline = 0.05
+	}
+	WFAS_orders_all_same_god = {
+		culture_conversion_cost = -0.2
+		development_cost = -0.1
+	}
+}
+
+WFAS_orders_LIV_ideas = {
+	start = {
+		religious_unity = 0.2
+		development_cost = -0.2
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = LIV
+	}
+	free = yes
+	WFAS_orders_bishoprics = {
+		missionaries = 1
+		global_missionary_strength = 0.02
+	}
+	WFAS_orders_legacy_of_battle_on_the_ice = {
+		infantry_power = 0.1
+	}
+	WFAS_orders_multiculturalism = {
+		num_accepted_cultures = 1
+	}
+	WFAS_orders_hansa_influence = {
+		global_own_trade_power = 0.2
+	}
+	WFAS_orders_devoted_catholics = {
+		papal_influence = 1
+		devotion = 0.5
+	}
+	WFAS_orders_warrior_monks = {
+		garrison_size = 0.2
+		land_morale = 0.05
+	}
+	WFAS_orders_grossgebietiger = {
+		army_tradition = 0.5
+		free_leader_pool = 1
+	}
+}
