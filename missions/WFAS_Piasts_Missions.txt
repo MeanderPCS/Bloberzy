@@ -1,0 +1,131 @@
+############### SLOT 1 ###############
+WFAS_PIAST_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MAZ
+			tag = OPL
+			tag = GLG
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_PIAST_legacy_of_piasts = {
+		position = 1
+		required_missions = {
+		}
+		icon = polish_diplomacy
+		trigger = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OR = {
+					legitimacy = 100
+					overlord = { 
+						NOT = {
+							legitimacy = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				legitimacy = 99
+			}
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 2
+			}
+			treasury = 150
+		}
+		effect = {
+			add_manpower = 10
+			add_country_modifier = {
+				name = WFAS_PIAST_the_piast_dynasty
+				duration = 7300
+			}
+		}
+	}
+	WFAS_PIAST_make_alliances = {
+		position = 2
+		required_missions = {
+			WFAS_PIAST_legacy_of_piasts
+		}
+		icon = mission_alliances
+		trigger = {
+				num_of_allies = 2
+		}
+		effect = {
+			add_mil_power = 100
+			define_general = {
+				name = "Marek Borbos"
+    			shock = 4
+    			fire = 2
+    			manuever = 3
+    			siege = 1
+			}
+			add_country_modifier = {
+				name = "WFAS_PIAST_prepare_to_battle"
+				duration = 3650
+			}
+		}
+	}
+
+	WFAS_PIAST_fight_for_freedom = {
+		position = 3
+		required_missions = {
+			WFAS_PIAST_make_alliances
+		}
+		icon = mission_cannons_firing
+		trigger = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_stability = 1
+			add_treasury = 300
+		}
+	}
+
+	WFAS_PIAST_expand_the_realm = {
+		position = 4
+		required_missions = {
+			WFAS_PIAST_fight_for_freedom
+		}
+		icon = mission_early_game_buildings
+		trigger = {
+			grown_by_development = 150
+		}
+		effect = {
+			add_treasury = 100
+			add_country_modifier = {
+				name = "WFAS_PIAST_prospering_times"
+				duration = 7300
+			}
+		}
+	}
+
+	WFAS_PIAST_return_of_piast_king = {
+		position = 5
+		required_missions = {
+			WFAS_PIAST_expand_the_realm
+		}
+		icon = mission_empire
+		trigger = {
+			government_rank = 2
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 25
+			add_splendor = 400
+		}
+	}
+}

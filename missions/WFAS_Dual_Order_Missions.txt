@@ -1,0 +1,585 @@
+############### SLOT 1 ###############
+WFAS_TNR_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNR
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_TNR_soldiers_of_christ = {
+		position = 3
+		required_missions = {
+			WFAS_TNR_army_of_god
+		}
+		icon = spread_piety
+		trigger = {
+			army_professionalism = 0.2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_soldiers_of_christ"
+				duration = -1
+			}
+			samogitia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lithuania_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			podlasie_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kuyavia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			mazovia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	WFAS_TNR_holy_fury = {
+		position = 4
+		required_missions = {
+			WFAS_TNR_soldiers_of_christ
+			WFAS_TNR_prepare_to_crusade
+		}
+		icon = mission_impaled_soldies
+		provinces_to_highlight = {
+			OR = {
+				area = samogitia_area
+				area = lithuania_area
+				area = podlasie_area
+				area = kuyavia_area
+				area = mazovia_area
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = samogitia_area
+					area = lithuania_area
+					area = podlasie_area
+					area = kuyavia_area
+					area = mazovia_area
+				}
+			}
+		}
+		effect = {
+			add_papal_influence = 20
+			add_prestige = 10
+			add_country_modifier = {
+				name = "WFAS_fight_the_pagans"
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = "WFAS_combat_heresy"
+				duration = -1
+			}
+		}
+	}
+}
+
+############### SLOT 2 ###############
+WFAS_TNR_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNR
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_TNR_army_of_god = {
+		position = 2
+		required_missions = {
+			WFAS_TNR_the_new_order
+		}
+		icon = mission_assemble_an_army
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.1
+				extra_shortcut = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_blessed_army"
+				duration = 3650
+			}
+		}
+	}
+	WFAS_TNR_prepare_to_crusade = {
+		position = 3
+		required_missions = {
+			WFAS_TNR_army_of_god
+		}
+		icon = mission_build_up_to_force_limit
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+				extra_shortcut = yes
+			}
+			manpower_percentage = 1
+			num_of_generals = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_holy_crusade"
+				duration = 7300
+			}
+		}
+	}
+	WFAS_TNR_join_the_hre = {
+		position = 5
+		required_missions = {
+			WFAS_TNR_holy_fury
+		}
+		icon = join_the_empire
+		trigger = {
+			hre_size = 1
+			if = {
+				limit = {
+					is_part_of_hre = no
+					is_emperor = no
+				}
+				emperor = {
+					has_opinion = {
+						who = ROOT
+						value = 120
+					}
+					reverse_has_opinion = {
+						who = ROOT
+						value = 120
+					}
+				}
+			}
+		}
+		effect = {
+			set_in_empire = yes
+		}
+	}
+	WFAS_TNR_conquer_the_east = {
+		position = 5
+		required_missions = {
+			WFAS_TNR_join_the_hre
+		}
+		icon = mission_develop_nevas_port
+		provinces_to_highlight = {
+			OR = {
+				area = pskov_area
+				area = novgorod_area
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = pskov_area
+					area = novgorod_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_conqueror_of_east"
+				duration = -1
+			}
+		}
+	}
+}
+
+############### SLOT 3 ###############
+WFAS_TNR_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNR
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_TNR_the_new_order = {
+		position = 1
+		required_missions = {
+		}
+		icon = mission_teutonic_knights
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.8
+		}
+		effect = {
+			create_general = {
+				tradition = 80
+			}
+		}
+	}
+	WFAS_TNR_new_reforms = {
+		position = 2
+		required_missions = {
+			WFAS_TNR_the_new_order
+		}
+		icon = mission_noble_council
+		trigger = {
+			advisor = trader
+			advisor = master_of_mint
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
+	}
+	WFAS_TNR_develop_the_order = {
+		position = 3
+		required_missions = {
+			WFAS_TNR_new_reforms
+		}
+		icon = mission_colonial
+		trigger = {
+			OR = {
+				total_development = 300
+				all_owned_province = {
+					development = 20
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 4
+				add_base_manpower = 4
+				add_base_production = 4
+			}
+			add_years_of_income = 1.5
+		}
+	}
+	WFAS_TNR_reconquer_jerusalem = {
+		position = 4
+		required_missions = {
+			WFAS_TNR_prepare_to_crusade
+			WFAS_TNR_donate_the_holy_see
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = palestine_area
+			}
+		}
+		icon = jerusalem
+		trigger = {
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 100
+			add_papal_influence = 50
+		}
+	}
+	WFAS_TNR_catholic_empire = {
+		position = 7
+		required_missions = {
+			WFAS_TNR_conquer_the_east
+			WFAS_TNR_destroy_reformation
+		}
+		icon = mission_italian_condottiere
+		trigger = {
+			prestige = 75
+			total_development = 1000
+			religion = catholic
+		}
+		effect = {
+			override_country_name = WFAS_TNR_THEGREATORDER
+			add_country_modifier = {
+				name = "WFAS_catholic_empire"
+				duration = -1
+			}
+		}
+	}
+}
+
+############### SLOT 4 ###############
+WFAS_TNR_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNR
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_TNR_in_the_name_of_pope = {
+		position = 2
+		required_missions = {
+			WFAS_TNR_the_new_order
+		}
+		icon = new_st_peters_basilica
+		trigger = {
+			religion = catholic
+			if = {
+				limit = {
+					exists = PAP
+				}
+				PAP = {
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			else = {
+				papal_influence = 100
+			}
+		}
+		effect = {
+			add_papal_influence = 50
+			add_prestige = 20
+		}
+	}
+	WFAS_TNR_donate_the_holy_see = {
+		position = 3
+		required_missions = {
+			WFAS_TNR_in_the_name_of_pope
+		}
+		icon = dominant_economy
+		trigger = {
+			religion = catholic
+			custom_trigger_tooltip = {
+				tooltip = WFAS_TNR_dual_order_donate_holy_see.tooltip
+				has_country_flag = WFAS_donated_holy_see
+			}
+		}
+		effect = {
+			palestine_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+	WFAS_TNR_destroy_reformation = {
+		position = 6
+		required_missions = {
+			WFAS_TNR_donate_the_holy_see
+			WFAS_TNR_external_mission
+		}
+		icon = mission_rb_control_state_religion
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				hre_religion = catholic
+				hre_religion_locked = yes
+			}
+			else = {
+				is_year = 1580
+				custom_trigger_tooltip = {
+					tooltip = WFAS_TNR_dual_order_destroy_reformation.tooltip
+					all_neighbor_country = {
+						NOT = {
+							religion = protestant
+						}
+						NOT = {
+							religion = reformed
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				add_country_modifier = {
+					name = "WFAS_catholic_dominance_1"
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "WFAS_catholic_dominance_2"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+############### SLOT 5 ###############
+WFAS_TNR_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNR
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	WFAS_TNR_show_the_piety = {
+		position = 3
+		required_missions = {
+			WFAS_TNR_in_the_name_of_pope
+		}
+		icon = connect_further_austria
+		trigger = {
+			religion = catholic
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			custom_tooltip = WFAS_TNR_dual_order_churches.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_building = cathedral
+							has_building = temple
+						}
+					}
+					add_base_tax = 5
+					add_province_modifier = {
+						name = "WFAS_land_of_churches"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	WFAS_TNR_internal_mission = {
+		position = 4
+		required_missions = {
+			WFAS_TNR_show_the_piety
+		}
+		icon = mission_hands_praying
+		trigger = {
+			religion = catholic
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						religion = catholic
+					}
+				}
+				amount = 25
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_strong_in_faith"
+				duration = 14600
+			}
+		}
+	}
+	WFAS_TNR_external_mission = {
+		position = 5
+		required_missions = {
+			WFAS_TNR_internal_mission
+		}
+		icon = consolidate_the_stadholders
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = WFAS_TNR_dual_order_external_mission.tooltip
+				calc_true_if = {
+					all_country = {
+						AND = {
+							defensive_war_with = ROOT
+							OR = {
+								religion = reformed
+								religion = protestant
+							}
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "WFAS_fight_the_heresy"
+				duration = 7300
+			}
+		}
+	}
+}
