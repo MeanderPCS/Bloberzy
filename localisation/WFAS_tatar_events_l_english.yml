@@ -1,0 +1,3 @@
+﻿l_english:
+ WFAS_lithuania_radziwill_title:0 "Radziwill Secession"
+ WFAS_lithuania_radziwill_desc:0 "[LIT.Monarch.GetName] was a noble and magnate in our state, occupying several important government positions in the Grand Duchy of Lithuania. Though when the enemies from the north came to fight against us, he was reluctant to help. Alas, as we were losing more and more, he pledged his allegiance to the [WFAS_lithuania_radziwill_target.Monarch.GetTitle] of [WFAS_lithuania_radziwill_target.GetName], seceding from our country, and taking the Duchy of Lithuania with him."

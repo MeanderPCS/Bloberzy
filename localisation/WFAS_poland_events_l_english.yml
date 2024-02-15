@@ -1,0 +1,225 @@
+﻿l_english:
+ WFAS_flavor_pol.1.title:0 "Silesian Revolt"
+ WFAS_flavor_pol.1.desc:0 "Rising unhappiness and Intolerance have led Silesians to start an uprising. They are asking for $COUNTRY_ADJ$ support and if we do help them, they promise they will become our subject."
+ WFAS_flavor_pol.1.a:0 "Support Silesian rebels!"
+ WFAS_flavor_pol.1.b:0 "It's not our buisness."
+ WFAS_flavor_pol.2.title:0 "Silesian Revolt"
+ WFAS_flavor_pol.2.desc:0 "Rising unhappiness and Intolerance have led Silesians to start an uprising. They desire a free Silesian state!"
+ WFAS_flavor_pol.2.a:0 "Crush them!"
+ WFAS_flavor_pol.3.title:0 "Silesian Revolt"
+ WFAS_flavor_pol.3.desc:0 "Rising unhappiness and intolerance have led Silesians to start an uprising. They desire a autonomus Silesian state! They are supported by Polish Crown and they became their vassal. We need to prepare defence."
+ WFAS_flavor_pol.3.a:0 "To war!"
+
+ WFAS_silesian_conflict:0 "Imperial Reconquest War for Silesia"
+ WFAS_reconquer_silesia:0 "Show Superiority"
+ WFAS_reconquer_silesia_desc:0 "Dominate Polish armies on the battlefield and show no mercy."
+ WFAS_imperial_reconquest_of_silesia:0 "Imperial Reconquest of Silesia"
+ WFAS_imperial_reconquest_of_silesia_desc:0 "We can not tolerate such a land thieft. Silesia is legal part of the Holy Roman Empire and it is high time to take it back from hands of Poles."
+
+ WFAS_flavor_pol.4.title:0 "Tensions between Poland and HRE"
+ WFAS_flavor_pol.4.desc:0 "Silesia is part of Poland, but it used to be a part of Holy Roman Empire. Emperor decided to reconquer Silesia and incorporate back to the Imperial borders."
+ WFAS_flavor_pol.4.a:0 "To war!"
+
+ WFAS_flavor_pol.1.tooltip:0 "This will lead us to war against Bohemia and their allies. Silesia will become our vassal."
+ WFAS_flavor_pol.2.tooltip:0 "Every elector that is neither Polish ally nor subject will help us to win a war."
+
+ incident_poland_and_the_empire_emperor_alert:0 "Silesia, the rightful part of the Holy Roman Empire, now lies within the borders of Poland. We have to decide if we want to fight for that land or leave them alone."
+ incident_poland_and_the_empire_member_alert:0 "Silesia, the rightful part of the Holy Roman Empire, now lies within the borders of Poland. We have to decide if we want to fight for that land or leave them alone."
+ incident_poland_and_the_empire:0 "Poland and Silesia"
+ WFAS_incident_poland_and_the_empire.2.t:0 "Poland and Silesia"
+ WFAS_incident_poland_and_the_empire.2.d:0 "Poland and Silesia"
+ WFAS_incident_poland_and_the_empire:0 "Poland and Silesia"
+ WFAS_incident_poland_and_the_empire.2.a:0 "We can not tolerate that. Silesia is part of an Empire and we will reconquer it."
+ WFAS_incident_poland_and_the_empire.2.b:0 "We do not want to fight with Poland. Let them keep Silesia in their borders."
+ flavor_pol.23.t:0 "Poland and Silesia"
+ flavor_pol.23.d:0 "We are controlling Silesia but the Holy Roman Emperor claims it as a part of HRE. In next few months, they will decide what to do with this land. We can not let them take Silesia!"
+ flavor_pol.23.a:0 "We will fight for Silesia!"
+
+ flavor_pol.24.t:0 "Tensions between Szlachta and the Magnates after election"
+ flavor_pol.24.d:0 "New king has been chosen. Estates are arguing which of them should have bigger influence on royal decisions. They want more privileges and less laws for the second estate."
+ flavor_pol.24.a:0 "Nobles are the most valuable advisors. Give them more power."
+ flavor_pol.24.b:0 "We need magnates as much as their money."
+
+ flavor_pol.18.c:0 "We need Piasts back on throne!"
+
+ flavor_pol.25.t:0 "Intermarium"
+ flavor_pol.25.d:0 "Our [Root.GovernmentName] has expanded so much that we achieved acces to both Baltic Sea and Black Sea. $MONARCH$ wants to celebrate that and show our neighbours how great we are."
+ flavor_pol.25.a:0 "We are the Intermarium"
+ flavor_pol.25.b:0 "Don't change the name"
+
+
+ #Magnates Events
+ magnates_estate_events.1.t:0 "New tax"
+ magnates_estate_events.1.d:0 "The state needs money and new tax may fix it. We have to decide who will pay the money. It may anger them but we can't avoid it."
+ magnates_estate_events.1.a:0 "Take money from Magantes"
+ magnates_estate_events.1.b:0 "Tax Szlachta"
+
+ magnates_estate_events.2.t:0 "New City"
+ magnates_estate_events.2.d:0 "One of minor towns has expanded so much that we need to nominate new administration to manage it. Shall we apoint someone new or let the current noble administrate that?"
+ magnates_estate_events.2.a:0 "Magnates know how to make city prosper."
+ magnates_estate_events.2.b:0 "Let's leave current noble on that position."
+
+ magnates_estate_events.3.t:0 "The Great Feast"
+ magnates_estate_events.3.d:0 "The wealthy Magnate has organised a great feast and he invited every local noble to join. They were eating, singing and dancing together all the night as if there had never been any war between them."
+ magnates_estate_events.3.a:0 "It's nice to see them not fighting each other."
+
+
+ magnates_estate_events.4.t:0 "Genius Magnate"
+ magnates_estate_events.4.d:0 "A Magnate with science talent has been discovered. His wealth let him create many intresting creations and inventions. He offered us a deal. He will give us his inventions for some gold."
+ magnates_estate_events.4.a:0 "Let's buy those inventions"
+ magnates_estate_events.4.b:0 "It's not intresting"
+
+ magnates_estate_events.5.t:0 "Import or Local Production?"
+ magnates_estate_events.5.d:0 "Burghers and Magnates are arguing about goods and production policy. Currently, we import some goods from our neighbours and export different ones in exchange. Burghers earn a lot of money on those transactions. Magnates don't like it and they think that state shouldn't give money to other countries and sholud support local production."
+ magnates_estate_events.5.a:0 "Support traders"
+ magnates_estate_events.5.b:0 "Support production"
+
+ magnates_estate_events.6.t:0 "Sejm of $YEAR$"
+ magnates_estate_events.6.d:0 "In [GetDate], every Noble and Magnate has arrived to $CAPITAL_CITY$ to speak out and share their opinion about new reforms of country. In next few days, the Sejm will make a decision if we should pass new reforms or better not."
+ magnates_estate_events.6.a:0 "Support Szlachta suggestions"
+ magnates_estate_events.6.b:0 "Support Magnates suggestions"
+ magnates_estate_events.6.c:0 "Favor neither of them"
+
+ magnates_estate_events.61.t:0 "Sejm passes Szlachta's reforms"
+ magnates_estate_events.61.d:0 "Sejm has accepted reforms suggested by Szlachta. Most of them will come into force in next weeks. Time will show if the reforms are correct."
+ magnates_estate_events.61.a:0 "We have to accept that"
+
+ magnates_estate_events.62.t:0 "Sejm passes Magnates's reforms"
+ magnates_estate_events.62.d:0 "Sejm has accepted reforms suggested by Magnates. Most of them will come into force in next weeks. Time will show if the reforms are correct."
+ magnates_estate_events.62.a:0 "We have to accept that"
+
+ magnates_estate_events.63.t:0 "Sejm Veto"
+ magnates_estate_events.63.d:0 "Sejm has rejected reforms suggested by both Magnates and Szlachta. None of them will come into force. All the money and time we spent here are wasted. It's not a good day in our history."
+ magnates_estate_events.63.a:0 "We have to accept that"
+
+ magnates_estate_events.65.a:0 "I hope Magnates won't forget about our support"
+ magnates_estate_events.66.a:0 "I hope Szlachta won't forget about our support"
+ 
+ # Elective Monarchy #
+ WFAS_elective_monarchy_events.1.t:0 "Interregnum in Poland"
+ WFAS_elective_monarchy_events.1.d:0 "$MONARCHTITLE$ has died. A tough times are ahead of us in the coming months. Nobles from whole Poland will arrive to $CAPITAL_CITY$ and elect new $MONARCHTITLE$."
+ WFAS_elective_monarchy_events.1.a:0 "God bless us and our [Root.GovernmentName]"
+ WFAS_elective_monarchy_events.1.b:0 "Perhaps Queen Bona should become a regent?"
+
+ WFAS_elective_monarchy_events.2.t:0 "Polish Election of new monarch"
+ WFAS_elective_monarchy_events.2.desc:0 "[GetDate], sunny afternoon. Polish magnates and noblemans are about to choose a new monarch for our great [Root.GovernmentName]. New monarch will sign privileges and make promises. We have to make a wise decision and elect the best candidate as possible."
+ WFAS_elective_monarchy_events.2.a:0 "Elect Polish candidate as a monarch"
+ WFAS_elective_monarchy_events.2.b:0 "Elect Lithuanian noble"
+ WFAS_elective_monarchy_events.2.c:0 "Elect noble from [WFAS_POL_same_continent_country.GetName]"
+ WFAS_elective_monarchy_events.2.d:0 "Elect relative of [WFAS_POL_ally_country.GetAdjective] [WFAS_POL_ally_country.Monarch.GetTitle], our loyal ally"
+ WFAS_elective_monarchy_events.2.e:0 "Elect [WFAS_POL_marriage_country.GetAdjective] noble with connections with Polish families"
+ WFAS_elective_monarchy_events.2.f:0 "Elect popular noble from [WFAS_POL_friend_country.GetName]"
+ WFAS_elective_monarchy_events.2.g:0 "Let the Queen Bona remain her position as a female ruler of Poland"
+ WFAS_elective_monarchy_events.2.h:0 "Elect perspective Duke of Transylvania, Stefan I Batory"
+ WFAS_elective_monarchy_events.2.i:0 "Elect warlike Jan from house Sobieski"
+
+ WFAS_elective_monarchy_events.3.t:0 "Where is the king?"
+ WFAS_elective_monarchy_events.3.d:0 "Minutes were passing, without our monarch present at the royal breakfast. Advisors have started to worry. After hours of searching for the [Root.Monarch.GetTitle], we realized that he escaped from the court."
+ WFAS_elective_monarchy_events.3.a:0 "He is gone!"
+
+ WFAS_elective_monarchy_events.4.t:0 "Privileges and Promises"
+ WFAS_elective_monarchy_events.4.d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has been elected. Now the estates demand to fulfill a promises. We can't leave them without any answer."
+ WFAS_elective_monarchy_events.4.a:0 "Nobles are my friends, I will fulfill a promises"
+ WFAS_elective_monarchy_events.4.b:0 "Magnates elected me, now I will pay the debt off"
+ WFAS_elective_monarchy_events.4.c:0 "I'm the [Root.Monarch.GetTitle] now and I don't care about that"
+
+ WFAS_elective_monarchy_events.5.t:0 "A coup of influencial noble"
+ WFAS_elective_monarchy_events.5.d:0 "An influencial noble from Polish family can't accept he has not been elected as a new King of [Root.GetName]. He thinks that foreign ruler can't rule on our throne. He has started a coup against us!"
+ WFAS_elective_monarchy_events.5.a:0 "[Root.Monarch.GetName] is our [Root.Monarch.GetTitle], we won't tolarate such a betrayal"
+
+ WFAS_elective_monarchy_event1.tooltip:0 "Election will be held in next few months"
+ WFAS_elective_monarchy_event3.tooltip:0 "[Root.Monarch.GetName] escapes form [Root.GetName]"
+ WFAS_elective_monarchy_event4.tooltip:0 "Each monarch skill will be increased by§Y 1§!."
+ WFAS_bona_sforza.tooltip:0 "Bona Sforza is present on the royal court."
+ WFAS_bona_sforza_married.tooltip:0 "Bona Sforza will become a new consort."
+
+ # WFAS Flavor Events #
+ WFAS_flavor_events_pol.1.title:0 "One and a half grosz Monetary Reform"
+ WFAS_flavor_events_pol.1.desc:0 "Our Grosz coin is in weak position and is overwhelmed by western currency. To aid our economy and monetary balance we want to introduce a intresting reform. Our mints will be producing a one and a half grosz now."
+ WFAS_flavor_events_pol.1.a:0 "Let's see the effects of that reform."
+
+ WFAS_flavor_events_pol.2.title:0 "First printing house in Kraków"
+ WFAS_flavor_events_pol.2.desc:0 "Kasper Straube, a German printer from Bavaria have printed and published the first print in Poland. His printing house is located in Kraków. We hope more printing houses will appear in next years."
+ WFAS_flavor_events_pol.2.a:0 "Printing is future"
+
+ WFAS_flavor_events_pol.3.title:0 "Congress of Vienna in $YEAR$"
+ WFAS_flavor_events_pol.3.desc:0 "Our [Root.Monarch.GetTitle] had arrived to Vienna and he met with the [HAB.Monarch.GetTitle] of Austria, [HAB.Monarch.GetName]. Austria is supporting Teutonic Order and Grand Duchy of Moscow in alliance against us. As it may dangerous for us, we want to remove one potential enemy and keep good relations with [HAB.Monarch.GetTitle]. In exchange, there will be some royal marriages between our dynsties."
+ WFAS_flavor_events_pol.3.a:0 "Let this truce last a long time"
+
+ WFAS_flavor_events_pol.4.title:0 "Jan Kochanowski"
+ WFAS_flavor_events_pol.4.desc:0 "Jan Kochanowski is a Polish Renaissance poet who established poetic patterns that would become integral to the Polish literary language. Kochanowski's best-known masterpiece is Treny. It is a series of nineteen elegies upon the death of his beloved two-and-a-half-year-old daughter Urszula."
+ WFAS_flavor_events_pol.4.a:0 "Great Poet"
+
+ WFAS_flavor_events_pol.5.title:0 "Sigismund's Chapel"
+ WFAS_flavor_events_pol.5.desc:0 "The Sigismund's Chapel, built by Italian architect Bartolomeo Berrecci, is a real art of Renaissance architecture. The inner sculptures, stuccos and paintings were designed by some of the most renowned artists, the architect Berrecci himself, Georg Pencz, Santi Gucci and Hermann Vischer."
+ WFAS_flavor_events_pol.5.a:0 "The most beautiful example of the Tuscan Renaissance north of the Alps"
+
+ WFAS_flavor_events_pol.6.title:0 "Protestants in Gdansk"
+ WFAS_flavor_events_pol.6.desc:0 "Inspired by Protestant Duke of Prussia, German citizens in Gdansk have started to rebel in order to defend their religious freedom. Shall we tolerate the heresy and keep the peace?"
+ WFAS_flavor_events_pol.6.a:0 "Support the Catholics"
+ WFAS_flavor_events_pol.6.b:0 "Let the Protestants be"
+
+ WFAS_flavor_events_pol.7.title:0 "Commentariorum de Republica emendanda libri quinque"
+ WFAS_flavor_events_pol.7.desc:0 "Polish Renaissance scholar, humanist and theologian, called ''the father of Polish democracy'', Andrzej Frycz Modrzewski, published the ''Five Books of Commentaries on the Improvement of Commonwealth''. He criticizes the papal influence on our country and belives that the state needs law and fair courts."
+ WFAS_flavor_events_pol.7.a:0 "He has a point. Let's start to reform the law."
+ WFAS_flavor_events_pol.7.b:0 "Heretic!"
+
+ WFAS_flavor_events_pol.8.title:0 "Crown Tribunal"
+ WFAS_flavor_events_pol.8.desc:0 "In $YEAR$ king [Root.Monarch.GetName] created the Crown Tribunal in order to reduce the enormous pressure on the Sejm. This placed much of the monarchs juridical power in the hands of the elected szlachta deputies, further strengthening the nobility class."
+ WFAS_flavor_events_pol.8.a:0 "Tribunals may became corrupted, take care of that"
+ WFAS_flavor_events_pol.8.b:0 "Leave them alone"
+
+ WFAS_flavor_events_pol.9.title:0 "Eight sermons before the Sejm"
+ WFAS_flavor_events_pol.9.desc:0 "Polish Jesuit Piotr Skarga published the Eight sermons before the Sejm. Skarga discusses what he sees as the problems of the ailing Commonwealth: lack of love for the Fatherland, internal quarrels, tolerance of "heretics", the relative powerlessness of the king, problematic laws (a critique of the Golden Freedoms) and immorality. Another noteworthy aspect of the book is its focus on the desperate situation of the serfs."
+ WFAS_flavor_events_pol.9.a:0 "He is trying to undermine the authority of the ruler"
+ WFAS_flavor_events_pol.9.b:0 "Maybe he is right"
+
+ WFAS_flavor_events_pol.10.title:0 "Jan Chryzostom Pasek"
+ WFAS_flavor_events_pol.10.desc:0 "Polish nobleman and writer, Jan Chryzostom Pasek, is popular for his memoirs, describing wars with the Swedish Empire, Transylvania, Muscovy and Lubomirski's Rebellion.  Altogether, Pasek fought in large parts of Europe, from Smolensk to Jutland, and from Gdańsk to Vienna."
+ WFAS_flavor_events_pol.10.a:0 "Great Noble"
+
+ WFAS_flavor_events_pol.19.t:0 "Ruch egzekucyjny"
+ WFAS_flavor_events_pol.19.d:0 "The Executionist movement's goal is to reform the country, increase the rights of the lesser and middle nobility in parliament (Sejm) at the expense of the magnates, the priesthood and to a lesser extent of the monarch."
+ WFAS_flavor_events_pol.19.a:0 "Accept the demands and execute the laws"
+ WFAS_flavor_events_pol.19.b:0 "Let the magantes keep crown territories"
+
+ WFAS_flavor_events_pol.37.t:0 "High quality grain from [Root.GetName]"
+ WFAS_flavor_events_pol.37.d:0 "Our farmlands and farm estates prosper. We are leading producer and exporter of grain in Europe. Our grain trade rivals are powerless, many of them went bankrupt. We have a grain monopoly!"
+ WFAS_flavor_events_pol.37.a:0 "Grain of such high quality should be sold with high price."
+
+ WFAS_poland_kosciuszko_insurection_title:0 "Kosciuszko Insurection"
+ WFAS_poland_kosciuszko_insurection_desc:0 "As Polish-Lithuanian Commonwealth was crumbling to enemy forces, a prominent general has risen up in something that was called 'Kosciuszko Insurection'. This general gathered a peasant army and revolted against the enemy forces, inspiring Polish people for ages to come."
+ WFAS_poland_kosciuszko_insurection_option:0 "Saddle up, heirs of hussars!"
+ WFAS_poland_kurland_title:0 "Courland and Semigalia"
+ WFAS_poland_kurland_desc:0 "The Duchy of Courland and Semigallia was once a part of the Livonian Confederation, and continued to function in a semi-autonomous state after it collapsed. Now, as these lands belong to us, the local nobles demand to continue this functioning, either as an autonomous province in our country, or as our loyal march."
+ WFAS_poland_kurland_autonomy:0 "A march?! Not a chance!"
+ WFAS_poland_kurland_march:0 "We have a common interest."
+ WFAS_poland_kurland_free:0 "I'm going to Africa!"
+ WFAS_poland_uniate_church_title:0 "The Union of Brest"
+ WFAS_poland_uniate_church_desc:0 "The Union of Brest was the 1595-96 decision of the Ruthenian Orthodox Church eparchies (dioceses) in the Polish–Lithuanian Commonwealth to break relations with the Eastern Orthodox Church and to enter into communion with, and place itself under the authority of the Pope of Rome. The Eparchy of Mukachevo that was located in the Kingdom of Hungary was left out of the process. The union established the Ruthenian Uniate Church, which currently exists as the Ukrainian Greek Catholic Church, and the Belarusian Greek Catholic Church."
+ WFAS_poland_support_uniates:0 "Support the Uniate Church"
+ WFAS_poland_support_disuniates:0 "Support the Disuniate Church"
+ WFAS_poland_bar_title:0 "Bar Confederation"
+ WFAS_poland_bar_desc:0 "After Russian troops arrested and exiled several vocal opponents (namely bishop of Kiev Jozef Andrzej Zaluski, bishop of Cracow Kajetan Soltyk, and Field Crown Hetman Waclaw Rzewuski with his son Seweryn), a group of Polish magnates decided to form a confederatio - a military association opposing the government in accordance with Polish constitutional traditions. The articles of the confederation were signed on 29 February 1768 at the fortress of Bar in Podolia. The instigators of the confederation included Adam Krasinski, Bishop of Kamieniec, his brother Michal Hieronim Krasinski, Casimir Pulaski, Kajetan Soltyk, Waclaw Rzewuski, Michal Jan Pac, Jerzy August Mniszech, Joachim Potocki and Teodor Wessel. Priest Marek Jandolowicz was a notable religious leader, and Michal Wielhorski the Confederation's political ideologue."
+ WFAS_poland_bar_option:0 "Down with the traitors!"
+ WFAS_poland_targowica_title:0 "Targowica Confederation"
+ WFAS_poland_targowica_desc:0 "The Targowica confederation opposed the Constitution of 3 May 1791, which had been adopted by the Great Sejm, especially the provisions limiting the privileges of the nobility. The text of the founding act of the confederation was drafted by the Russian general Vasili Stepanovich Popov, Chief of Staff of Prince Grigori Alexandrovich Potemkin. Its purpose was proclaimed in the small town of Targowica and the Potocki's estate on May 14, 1792. Four days later two Russian armies invaded the Polish-Lithuanian Commonwealth without a formal declaration of war."
+ WFAS_poland_targowica_option:0 "Down with the traitors!"
+ WFAS_poland_estonia_title:0 "Duchy of Estonia"
+ WFAS_poland_estonia_desc:0 "Though we've possessed the lands of Estonia for quite a while, lack of direct border with it has driven the lands further and further from our control. Now, Estonia is a semi-autonomous region, which is striving for its self-governance. What is our next move?"
+ WFAS_poland_estonia_autonomy:0 "Give them more autonomy."
+ WFAS_poland_estonia_vassal:0 "Hereby the Duchy of Estonia shall be our vassal."
+ WFAS_poland_estonia_kurland:0 "Give the lands to [KUR.GetName]"
+ WFAS_poland_dunin_title:0 "Piotr Dunin"
+ WFAS_poland_dunin_desc:0 "Piotr Dunin was the commander in chief of the royal polish army in the Thirteen Years' War. His tactical talent and the consistency with which he tried to cut off the orders from obtaining reinforcements from Germany undoubtedly contributed to the victory of Poland. He triumphed in the Battle of Świecin, conquered Gniew and Chojnice. He was a commander of great authority, but also a ruthless man, with a tough hand maintaining discipline in his mercenary units."
+ WFAS_poland_dunin_general:0 "Make him a general!"
+ WFAS_poland_dunin_advisor:0 "He would better serve as a commandant"
+
+ WFAS_flavor_events_pol.38.title:0 "Queen Bona Sforza"
+ WFAS_flavor_events_pol.38.desc:0 "Our wise monarch, $MONARCH$, have just married the Italian lady named Bona, from house of Sforza. Thanks to that, we can keep habsburgs far away from our crown."
+ WFAS_flavor_events_pol.38.a:0 "Long live Queen Bona"
+
+ WFAS_flavor_events_pol.39.title:0 "Hammer on the Cossacks"
+ WFAS_flavor_events_pol.39.desc:0 "We have received a new that prince of Wisniowiec, Lubnie and Chorol, Jeremi Wisniowiecki, have converted from Eastern Orthodoxy to Roman Catholicism. It caused much dissent in our Ruthenian lands but Jeremi rules his land with iron fist, suppressing every single cossack revolt. He is also great military leader. His reputation is great, he is loyal to the crown and he is supported by majority of nobility. This man is someone we should appreciate."
+ WFAS_flavor_events_pol.39.a:0 "His military skills are superb, let him command our troops"
+ WFAS_flavor_events_pol.39.b:0 "We need his experience and charisma at the royal court"

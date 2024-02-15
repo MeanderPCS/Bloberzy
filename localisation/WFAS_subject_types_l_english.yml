@@ -1,0 +1,5 @@
+﻿l_english:
+ WFAS_protectorate_title: "Protectorate"
+ WFAS_protectorate_title_plural: "Protectorates"
+ WFAS_protectorate_long_desc: "A protectorate was a unique subject-overlord relationship that allowed protection to the subject in exchange of his mandatory war participation."
+ WFAS_protectorate_is_our: "$NAME"

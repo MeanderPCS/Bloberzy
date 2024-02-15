@@ -1,0 +1,11 @@
+﻿l_english:
+ polish_magnates_MECHANIC_TOOLTIP:0 "Magnates"
+ polish_szlachta_MECHANIC_TOOLTIP:0 "Szlachta"
+ polish_szlachta:0 "Szlachta"
+ polish_magnates:0 "Magnates"
+ WFAS_the_institution_of_interrex:0 "The Institution of Interrex"
+ WFAS_the_institution_of_interrex_desc:0 "On monarch's death, the interrex will oversee the internal administration until a new king is elected."
+ WFAS_interrex.tooltip:0 "§YReform Modifiers:§!"
+ WFAS_interrex_adm_skill.tooltip:0 "Interregnum Administrative Skill:§G +2.00§!"
+ WFAS_interrex_dip_skill.tooltip:0 "Interregnum Diplomatic Skill:§G +2.00§!"
+ WFAS_interrex_mil_skill.tooltip:0 "Interregnum Military Skill:§G +2.00§!"

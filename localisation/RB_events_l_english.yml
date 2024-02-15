@@ -1,0 +1,47 @@
+﻿l_english:
+ RB_ideagroups.1.t:0 "Supply for our forts"
+ RB_ideagroups.1.d:0 "Keeping forts and bastions in good condition during wartime is quite demanding thing. Thanks to our experience from last war, we know how to perform it correctly, however it still needs a lot of resources. Shall we make more effort to maintain our defence in perfect state, or we better should take care of other military aspects?"
+ RB_ideagroups.1.a:0 "Supply our garrisons"
+ RB_ideagroups.1.b:0 "They will withstand without additional help"
+
+ RB_ideagroups.2.t:0 "Road systems"
+ RB_ideagroups.2.d:0 "Our architects plan road systems in specific way, so they are efficient enough too support all that growing population. That effort, although increase the costs, improves our cities and make them expand even faster."
+ RB_ideagroups.2.a:0 "The road systems are a measure of our strength"
+
+ RB_ideagroups.3.t:0 "Huge marching armies attracts... courtesans"
+ RB_ideagroups.3.d:0 "It's not easy to relocate whole army without any attention and the fact we use the main roads to carry it out apace doesn't help at all. Because of that, many courtesans appear around the army camps and provide their services to soldiers. They don't seem to be scared. We have to decide what to do in this case."
+ RB_ideagroups.3.a:0 "Chase them away and keep the discipline!"
+ RB_ideagroups.3.b:0 "Maybe, let's move on to another case..."
+
+ RB_ideagroups.4.t:0 "Bad weather and heavy rains"
+ RB_ideagroups.4.d:0 "Heavy rains and bad weather has been distrubing our supply and transport system. Many tracks are impassable, trees and branches are lying on the roads, blocking the way. This situation causes terrible consequences for $COUNTRY_ADJ$ traders and manufactories."
+ RB_ideagroups.4.a:0 "We have to accept that"
+ RB_ideagroups.4.b:0 "Clear the roads!"
+
+ RB_ideagroups.5.t:0 "Cheaper materials, cheaper construction"
+ RB_ideagroups.5.d:0 "Since we have focused on enhanced production, many various materials has lost it high price. As a result, we are now able to construct even more buildings and manufactories without exceeding the budget."
+ RB_ideagroups.5.a:0 "Build, expand and prosper"
+
+ RB_ideagroups.6.t:0 "Sell or use on our own?"
+ RB_ideagroups.6.d:0 "Our country is strong and inherent part of $CONTINENT$'s economy. We produce a lot of various goods which we export to our neighbours. Perhaps it would be better for us to invest these goods and resources to improve our production even more?"
+ RB_ideagroups.6.a:0 "Forget about others, improve our economy"
+ RB_ideagroups.6.b:0 "There is no need to produce more goods"
+
+ RB_ideagroups.7.t:0 "Improved Residential Building Architecture"
+ RB_ideagroups.7.d:0 "Cities consume a lot of resources. Every man needs a roof over his head. Materials we produce are highly durable and resistant so we can build highier residential buildings. This will surely improve the population in our cities."
+ RB_ideagroups.7.a:0 "More inhabitants means more tax"
+ RB_ideagroups.7.b:0 "I want to see them supporting our army"
+
+ RB_ideagroups.8.t:0 "The Great Depression"
+ RB_ideagroups.8.d:0 "For some years, we have been producing more and more goods. As a result, our market has been filled to the brim. Manufactories produce more resources that we really need and no one buys them. Strict budgets are not supported by coins anymore and they go bankrupt. Our economy breaks down, people lose jobs and homes."
+ RB_ideagroups.8.a:0 "How is it possible?!"
+
+ RB_ideagroups..t:0 ""
+ RB_ideagroups..d:0 ""
+ RB_ideagroups..a:0 ""
+ RB_ideagroups..b:0 ""
+
+ RB_ideagroups..t:0 ""
+ RB_ideagroups..d:0 ""
+ RB_ideagroups..a:0 ""
+ RB_ideagroups..b:0 ""

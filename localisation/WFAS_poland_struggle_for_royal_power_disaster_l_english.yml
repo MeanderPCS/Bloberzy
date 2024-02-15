@@ -1,0 +1,125 @@
+﻿l_english:
+ WFAS_flavor_events_pol.11.t:0 "The Struggle for Royal Power"
+ WFAS_flavor_events_pol.11.d:0 "Tension between the [Root.Monarch.GetTitle] and the Sejm has reached a breaking point. The [Root.Monarch.GetTitle] has become entirely intolerant of the perpetual need to compromise with the Magnates in order to accomplish even the most minor act of governance, with these nobles finding cause to act against the monarch at every possible turn. The [Root.Monarch.GetTitle] believes that it is finally time to put an end to the power of the Sejm in [Root.GetName]."
+ WFAS_flavor_events_pol.11.a:0 "Wage a war on the Magnates."
+
+ WFAS_flavor_events_pol.12.t:0 "Konfederacja"
+ WFAS_flavor_events_pol.12.d:0 "Just as the [Root.Monarch.GetName] has resolved to remove power from the Sejm, so has the Sejm made its own demands to the [Root.Monarch.GetName]. Mikolaj Zebrzydowski, Jan Szczesny Herburt, Stanislaw Stadnicki, Aleksander Józef Lisowski and Janusz Radziwill have formed a rokosz, or semi-legal rebellion, in Stezyca and Lublin. The nobles have gathered at the rokosz formed a Konfederacja which outlined demands in 67 articles, demanding the dethronement of [Root.Monarch.GetName] for breaching the Henrykian Articles, and the right for the Sejm to appoint state officials instead of the [Root.Monarch.GetTitle]."
+ WFAS_flavor_events_pol.12.a:0 "Try to negotiate with the konfederacja."
+ WFAS_flavor_events_pol.12.b:0 "Reject their demands."
+
+ WFAS_flavor_events_pol.13.t:0 "Rokosz Sandomierski"
+ WFAS_flavor_events_pol.13.d:0 "Following the establishment of a konfederacja demanding the dethronement of the [Root.Monarch.GetTitle], rebel nobles have risen up in open rebellion against the Crown. A royal army under the command of Hetman Jan Karol Chodkiewicz has been sent to pacify the rebels, though there is still a chance to negotiate and concede to some of their demands."
+ WFAS_flavor_events_pol.13.a:0 "Confer with the rebel leaders."
+ WFAS_flavor_events_pol.13.b:0 "Suppress the rebels."
+
+ WFAS_flavor_events_pol.14.t:1 "The Pacification of Sejm"
+ WFAS_flavor_events_pol.14.d:1 "The rebellion of the Szlachta is over! The refusal of the [Root.Monarch.GetName] to concede to noble demands as well as [Root.Monarch.GetHerHis] victories against rebel uprisings have resulted in a clear victory for the Crown. The Szlachta have surrendered in exchange for lenient punishments for their crimes and the [Root.Monarch.GetName] has truly seized the reins of government, establishing for the first time a hereditary and absolute monarchy in [Root.GetName]."
+ WFAS_flavor_events_pol.14.a:1 "The nobles have formally surrendered."
+
+ WFAS_flavor_events_pol.15.t:0 "The Sejm Seizes Control"
+ WFAS_flavor_events_pol.15.d:0 "Having conceded to what feels like countless compromises with the Sejm, [Root.Monarch.GetName] can take no more and has announced [Root.Monarch.GetHerHis] abdication. With no candidate to the throne willing to inherit the dismal state of the [Root.GetAdjective] monarchy, complete power now resides in the Sejm. [Root.GetName] has sometimes been referred to as a Republic due to the elective monarchy, but from today there will truly be a Most Serene Republic of [Root.GetName]."
+ WFAS_flavor_events_pol.15.a:0 "What else is a [Root.Monarch.GetTitle] to do?"
+
+ WFAS_flavor_events_pol.16.t:0 "Struggle for Royal Power Ends"
+ WFAS_flavor_events_pol.16.d:0 "After a long struggle involving both political and military conflict, the crisis in [Root.GetName] is at an end. There is no longer any doubt as to where the true power in [Root.GetName] lies."
+ WFAS_flavor_events_pol.16.a:0 "The [Root.Monarch.GetTitle] is supreme!"
+ WFAS_flavor_events_pol.16.a2:0 "The new elected [Root.Monarch.GetTitle] is supreme!"
+ WFAS_flavor_events_pol.16.b:0 "The Sejm is supreme!"
+ WFAS_flavor_events_pol.16.c:0 "The Holy Order is supreme!"
+
+ WFAS_flavor_events_pol.17.t:0 "Death of Jan Zamoyski"
+ WFAS_flavor_events_pol.17.d:0 "We received sad news this morning. Our Great Hetman of the Crown, Jan Zamoyski is dead. He was one of the major supporters of [Root.Monarch.GetName], and one of the most skilled diplomats, politicians and statesmen. He was respected by his opponents, widely recognized as highly intelligent, a cunning strategist and tactician in matters political and military, and a popular political leader. He valued the good of the country at least as high as his own."
+ WFAS_flavor_events_pol.17.a:0 "His death will hurt the crown and the country!"
+
+ WFAS_flavor_events_pol.18.t:0 "Jan Karol Chodkiewicz"
+ WFAS_flavor_events_pol.18.d:0 "Jan Karol Chodkiewicz, military commander of the [Root.GetName]. He is very skilled strategist and tactician. Chodkiewicz posses an iron will, which he is able to impose on the troops under his command, and that he is an efficient commander, although more respected and feared than beloved by his troops."
+ WFAS_flavor_events_pol.18.a:0 "I guess we will need him in next few months..."
+
+ WFAS_flavor_events_pol.20.t:0 "Rebellion of Magnate"
+ WFAS_flavor_events_pol.20.d:0 "Polish magnate has declared independence from the crown and he have organised own rokosz. He wants to enforce his demands and get autonomy."
+ WFAS_flavor_events_pol.20.a:0 "Punish him!"
+ WFAS_flavor_events_pol.20.b:0 "Try to negotiate with him, we don't want to spill the blood"
+
+ WFAS_flavor_events_pol.21.t:0 "Rising unrest and intolerance"
+ WFAS_flavor_events_pol.21.d:0 "More the [Root.Monarch.GetName] wants to strenghten the crown, more the estates worry and rebel. Having great influence on royal decisions and elections is very comfortable for magnates that wants to keep it. On the other hand, Szlachta is being omitted and ignored. Rising intolerance and revoking old privileges makes them angry and irritated. It seems that we need to decide what will we do, support szlachta, let the magnates interfere in the affairs of the state or force them to be loyal and achieve the absolute control."
+ WFAS_flavor_events_pol.21.a:0 "Elective monarchy with magnate support is the most enlighted government"
+ WFAS_flavor_events_pol.21.b:0 "Szlachta knows best what do the country needs"
+ WFAS_flavor_events_pol.21.c:0 "All the power should belong to monarch!"
+
+ WFAS_flavor_events_pol.22.t:0 "Dangerous rumors"
+ WFAS_flavor_events_pol.22.d:0 "Szlachta is outraged by decision about letting magnates to keep their power and influence on ruler. They want a change in government and end of unfair dominance of rich magnates."
+ WFAS_flavor_events_pol.22.a:0 "Try to ease the tension"
+ WFAS_flavor_events_pol.22.b:0 "Enforce loyalty"
+
+ WFAS_flavor_events_pol.23.t:0 "Uprising of Szlachta"
+ WFAS_flavor_events_pol.23.d:0 "Rising unrest in szlachta estate caused a military uprising. Folwarks are burning, people want royal blood. We have to stop that rage and restore order, diplomaticlly or with firepower."
+ WFAS_flavor_events_pol.23.a:0 "It's time to show them hierarchy"
+ WFAS_flavor_events_pol.23.b:0 "I will not fire cannons to my own people"
+
+ WFAS_flavor_events_pol.24.t:0 "Nobles Seized power"
+ WFAS_flavor_events_pol.24.d:0 "Rebels just entered the throne room. There is no more soldiers to guard [Root.Monarch.GetName]. Now, he is forced to accept new laws and privileges that will make him powerless. Sad day in history of our monarchy."
+ WFAS_flavor_events_pol.24.a:0 "It's time to abandon throne room"
+
+ WFAS_flavor_events_pol.25.t:0 "Nobles surrender"
+ WFAS_flavor_events_pol.25.d:0 "We are victorious, there is no more threat from szlachta. Now we should fix the country after this turmoil and not let them rebel again."
+ WFAS_flavor_events_pol.25.a:0 "Long live the elective monarchy!"
+ WFAS_flavor_events_pol.25.b:0 "It's an end of golden liberty"
+
+ WFAS_flavor_events_pol.26.t:0 "Disloyal magnates"
+ WFAS_flavor_events_pol.26.d:0 "After decision of supporting the Szlachta estate, many magnates decide to leave your court. Many of them are your valuable advisors."
+ WFAS_flavor_events_pol.26.a:0 "We don't need them"
+ WFAS_flavor_events_pol.26.b:0 "They are too important for us to let them leave"
+
+ WFAS_flavor_events_pol.27.t:0 "Uprising of Magnates"
+ WFAS_flavor_events_pol.27.d:0 "Favoring szlachta estate made magnates started an uprising! They are outraged. They demand abdication of [Root.Monarch.GetName]."
+ WFAS_flavor_events_pol.27.a:0 "Kill them all"
+ WFAS_flavor_events_pol.27.b:0 "We can not fight with our brothers"
+
+ WFAS_flavor_events_pol.28.t:0 "Magnates Seized power"
+ WFAS_flavor_events_pol.28.d:0 "Army of magnates was too strong too stop them. [Root.Monarch.GetName] has accepted [Root.Monarch.GetHerHis] fate. It's time to abandon the idea of [Root.GetAdjective] noble republic."
+ WFAS_flavor_events_pol.28.a:0 "Back to old monarchy"
+
+ WFAS_flavor_events_pol.29.t:0 "Birth of [Root.GetAdjective] Republic"
+ WFAS_flavor_events_pol.29.d:0 "We have won the civil war and we can now embrace the republic! Under that system, all nobles (szlachta), regardless of rank or economic status, will be considered to have equal legal status."
+ WFAS_flavor_events_pol.29.a:0 "Long live the republic!"
+
+ WFAS_flavor_events_pol.30.t:0 "Expand the Royal Army"
+ WFAS_flavor_events_pol.30.d:0 "We are in civil war. We need to hire as many troops as possible to deal with rebels and restore order. Shall we expand our Royal Army?"
+ WFAS_flavor_events_pol.30.a:0 "We need more men to fire the guns!"
+ WFAS_flavor_events_pol.30.b:0 "Don't recruit new soldiers"
+
+ WFAS_flavor_events_pol.31.t:0 "General's resignation"
+ WFAS_flavor_events_pol.31.d:0 "One of our generals has just resignate. It's big loss for our general staff."
+ WFAS_flavor_events_pol.31.a:0 "Who will lead our armies?"
+
+ WFAS_flavor_events_pol.32.t:0 "The [Root.Monarch.GetTitle] and general"
+ WFAS_flavor_events_pol.32.d:0 "Our [Root.Monarch.GetTitle], [Root.Monarch.GetName] has just decided to become general and lead our armies in battles. We know the risk, but [Root.Monarch.GetName] seems to be smart leader, that will help us win the battles."
+ WFAS_flavor_events_pol.32.a:0 "For victory!"
+
+ WFAS_flavor_events_pol.33.t:0 "Problems with grain export"
+ WFAS_flavor_events_pol.33.d:0 "Because of civil war, we are having big problems with bot production and export of grain. We have to end this or we will have huge economy problems in next years."
+ WFAS_flavor_events_pol.33.a:0 "They will pay for that!"
+
+ WFAS_flavor_events_pol.34.t:0 "Deserting Soldiers"
+ WFAS_flavor_events_pol.34.d:0 "Many of our soldiers are deserting. They don't wish fight against their brothers and sisters. It may be very dangerous situation when we will not have any men to fight for country and [Root.Monarch.GetTitle]."
+ WFAS_flavor_events_pol.34.a:0 "Damn them!"
+
+ WFAS_flavor_events_pol.35.t:0 "Disorganization in army"
+ WFAS_flavor_events_pol.35.d:0 "Some of ours generals are not willing to lead armies for us and are joining our enemies in civil war. Because of that, it will be hard to find new useful generals."
+ WFAS_flavor_events_pol.35.a:0 "We need them!"
+
+ WFAS_flavor_events_pol.36.t:0 "Religious Turmoil in Gdansk"
+ WFAS_flavor_events_pol.36.d:0 "Religious turmoil is happening in Gdansk. Protestants gathered together and completely devastated catholic church. In response, catholics kidnapped some protestant priests. After some hours, both groups grew and met each other so the fight, or even battle, has begun."
+ WFAS_flavor_events_pol.36.a:0 "That's how the tolerance ends"
+
+ WFAS_flavor_events_pol.1.tooltip:0 "Prevents from starting§Y Struggle for Royal Power§! disaster."
+ WFAS_flavor_events_pol.2.tooltip:0 "Try to maintain§Y current§! government."
+ WFAS_flavor_events_pol.3.tooltip:0 "Try to reform government into§Y noble republic§!."
+ WFAS_flavor_events_pol.4.tooltip:0 "Try to cut privileges and establish§Y absolute§! government."
+ WFAS_flavor_events_pol.5.tooltip:0 "§YThis will put us on path to establishing absolute government.§!"
+ WFAS_flavor_events_pol.6.tooltip:0 "§YThis will put us on path to establishing rebublic.§!"
+ WFAS_flavor_events_pol.7.tooltip:0 "§YThis will put us on path to maintaining current government.§!"
+ WFAS_flavor_events_pol.8.tooltip:0 "There will be a battle between Catholics and Protestants in Gdansk."
+
+ mechanic_foreign_slave_rulers_yes:0 ""

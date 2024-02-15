@@ -1,0 +1,172 @@
+﻿l_english:
+ BLOBERS_huaynaputina_has_erupted:0 "The Huaynaputina has erupted"
+ BLOBERS_huaynaputina_impatct_ended:0 "Eruption of Huaynaputina has no more impact on our country."
+ BLOBERS_huaynaputina_has_erupted.tooltip:0 "§RThe late game crisis has started. It will last for about 20 years. Your country will suffer severe penalties and struggle problems.§!"
+ BLOBERS_eruption_of_huaynaputina:0 "Eruption of Huaynaputina"
+ BLOBERS_END_OF_DARK_SKY:0 "until the end of the Eruption of Huaynaputina disaster"
+ BLOBERS_huaynaputina_food_raids.tooltip:0 "§YEnable special Casus Belli to raid other countries in order to get food. Getting food will decrease penalties from disaster events. You can only attack targets that have food or just succesfuly raided others to get so.§!"
+ BLOBERS_huaynaputina_peasents_raids.tooltip:0 "§YPeasents will carry out an independed food raid on [BLOBERS_peasents_raid.GetName]. Chances of success are limited and it will surely make them angry.§!"
+ BLOBERS_huaynaputina_peasents_raids_lost_food.tooltip:0 "We have §Rlost§! our food supplies!"
+ BLOBERS_huaynaputina_peasents_raids_keep_food.tooltip:0 "Our food supplies are safe!"
+ BLOBERS_huaynaputina_peasents_raids_stolen_food.tooltip:0 "We have food supplies now!"
+ BLOBERS_has_food.tooltip:0 "They have food"
+ BLOBERS_huaynaputina_devastation.tooltip:0 "Every owned province gets §R10§! devastation."
+ BLOBERS_huaynaputina_has_food.tooltip:0 "Has food supplies"
+ BLOBERS_huaynaputina_spy_lose_food.tooltip:0 "They will lose their food supplies."
+ BLOBERS_huaynaputina_spy_get_food.tooltip:0 "We will get food supplies."
+ BLOBERS_huaynaputina_god_answear.tooltip:0 "We will wait for God's answer."
+
+ BLOBERS_huaynaputina_has_ended.tooltip:0 "The disaster ''Eruption of Huaynaputina'' has ended!"
+
+ BLOBERS_hijack_food_transport_option_tooltip:0 "Prepare special logistic operation and steal their food supplies."
+ BLOBERS_hijack_food_transport_option_title:0 "Hijack food transport"
+ BLOBERS_hijack_food_transport_option_desc:0 "Hijack food transport and steal their supplies."
+
+ BLOBERS_has_food_title:0 "§OFood supplies status§!"
+ BLOBERS_has_food_desc:0 "This option is only visible when disaster 'Eruption of Huaynaputina' is active. You can check if you have food supplies here. Decision acceptance does nothing."
+
+ FOOD_RAID_WAR_NAME:0 "$ORDER$$FIRST$ food raid on $SECOND_NAME$"
+
+ BLOBERS_huaynaputina_food_raids:0 "Food Raid"
+ BLOBERS_huaynaputina_food_raids_desc:0 "Raid country and steal their food."
+ BLOBERS_huaynaputina_raid:0 "Food Raid"
+ BLOBERS_huaynaputina_raid_desc:0 "Siege down their capital and steal their food supplies."
+ BLOBERS_steal_food:0 "Steal food"
+ PEACE_BLOBERS_steal_food:0 "Steal their food"
+ BLOBERS_steal_food_desc:0 "Steal their food."
+ CB_ALLOWED_BLOBERS_steal_food:0 "Steal food"
+ BLOBERS_food_raid_opinion:0 "Raided for Food"
+
+ BLOBERS_raided_rival_for_food:0 "Raided rival for food."
+
+ eruption_of_huaynaputina.start.title:0 "The "Dark Sky""
+ eruption_of_huaynaputina.start.desc:0 "Something strange has happened. Since today morning, there is huge, dark, grey cloud visible on the horizon. It's not a normal typical storm cloud, it looks like steam from deepest hole in the hell. The air smells different, strange. Let's hope it will go away fastly."
+ eruption_of_huaynaputina.start.a:0 "Did the God turn against us?"
+
+ eruption_of_huaynaputina.1.title:0 "First unnaturally cold summer"
+ eruption_of_huaynaputina.1.desc:0 "The summer of [GetYear] was very cold. The harvest failed and we haven't collected as many goods as expected. Our export will suffer. Hope our people have amassed enough food to survive winter."
+ eruption_of_huaynaputina.1.a:0 "I guess we need to find money somewhere else."
+
+ eruption_of_huaynaputina.2.title:0 "First unnaturally cold summer"
+ eruption_of_huaynaputina.2.desc:0 "The summer of [GetYear] was very cold. The harvest failed and we haven't collected as many goods as expected. Our export will suffer. Hope our people have amassed enough food to survive winter."
+ eruption_of_huaynaputina.2.a:0 "I guess we need to find money somewhere else."
+
+ eruption_of_huaynaputina.3.title:0 "The great depletion of fauna"
+ eruption_of_huaynaputina.3.desc:0 "It's second summer since the start of "Dark Sky" anomaly. The winter was very cold which results with tough enviroment for plants to grow. No plants mean no herbivorous animals, so our population of livestock has greatly decreased. Same thing is happening in forests where is hard to find a living creature now."
+ eruption_of_huaynaputina.3.a:0 "At least fishes have not disappeared."
+
+ eruption_of_huaynaputina.4.title:0 "White ground and grey sky"
+ eruption_of_huaynaputina.4.desc:0 "The situation is going worse and worse. People have no more food supplies and the harvesting season has not started yet. It does not matter because it will probably fail as the two ones earlier."
+ eruption_of_huaynaputina.4.a:0 "This hard time will test our strength, will and endurance."
+
+ eruption_of_huaynaputina.5.title:0 "Low army enthusiasm"
+ eruption_of_huaynaputina.5.desc:0 "Great famine and lack of goods effects with low enthusiasm to join an army. People belives that it is an end of times and it's pointless to fight for country when the country can not help you survive."
+ eruption_of_huaynaputina.5.a:0 "We need army and we will force them to join it!"
+
+ eruption_of_huaynaputina.6.title:0 "Volcanic ashes"
+ eruption_of_huaynaputina.6.desc:0 "Tons of ashes are falling from the sky, covering the forests, fields, cities and villages. Because of that there is a feeling like the whole world is a huge, cold furnance right after great fire."
+ eruption_of_huaynaputina.6.a:0 "I wish it was just a normal snow."
+
+ eruption_of_huaynaputina.7.title:0 "Our economy collapses"
+ eruption_of_huaynaputina.7.desc:0 "Our economy is running low. People are hungry and angry, they don't care about taxes and they have stopped building anything. It's extremely hard to manage anything with such society."
+ eruption_of_huaynaputina.7.a:0 "This will stop our grow for years!"
+
+ eruption_of_huaynaputina.8.title:0 "Forest on fire"
+ eruption_of_huaynaputina.8.desc:0 "Fire has started in one of our provinces. It has already grown so huge we can not fight it. There is nothing we can do."
+ eruption_of_huaynaputina.8.a:0 "Nature is killing itself."
+
+ eruption_of_huaynaputina.9.title:0 "Robbers burn workshop to the ground"
+ eruption_of_huaynaputina.9.desc:0 "Last night, some filthy robbers have broken into workshop in [BLOBERS_eruption_of_huaynaputina_event_province.GetName]. They had stolen all the equipment and then started fire in building. There is nothing left there now."
+ eruption_of_huaynaputina.9.a:0 "They will pay for this!"
+
+ eruption_of_huaynaputina.10.title:0 "Toxic water in lake"
+ eruption_of_huaynaputina.10.desc:0 "The fall of toxic ashes probably made water in local lake toxic and non-drinkable. Almost all people in small village next to this lake has passed away becouse of this water."
+ eruption_of_huaynaputina.10.a:0 "How is that possible?"
+
+ eruption_of_huaynaputina.11.title:0 "We can trust no one"
+ eruption_of_huaynaputina.11.desc:0 "We can not let our country collapse, even if gods want it happen. As long as we are alive we should fight with this apocalypse. The fact is that we stand alone, we can only trust ourselfes. Other countries suffer similar problems, and so what, they may betray us and rob our goods in order to survive. We can not let that happen, so we should play it safe. It is probably wise to prepare some raids on our neighbours and steal some food."
+ eruption_of_huaynaputina.11.a:0 "If someone can stay alive, better we than them!"
+
+ eruption_of_huaynaputina.12.title:0 "Peasants decided to raid our ally"
+ eruption_of_huaynaputina.12.desc:0 "Peasants and poor struggle a lot. Most of them have no more food to eat. They decided to group and raid borders of our ally in order to get something to eat. This will surely displease our ally."
+ eruption_of_huaynaputina.12.a:0 "At least they don't raid my property"
+
+ eruption_of_huaynaputina.13.title:0 "We have been raided by [From.GetName]!"
+ eruption_of_huaynaputina.13.desc:0 "The peasents of [From.GetName] have raided us. We have lost our food supplies. We didn't expect our ally to be such a traitor."
+ eruption_of_huaynaputina.13.a:0 "[From.GetAdjective] scum!"
+
+ eruption_of_huaynaputina.14.title:0 "[From.GetName] have tried to raid us!"
+ eruption_of_huaynaputina.14.desc:0 "The filthy scum of [From.GetName] tried to raid us and steal our food supplies. It's unacceptable!"
+ eruption_of_huaynaputina.14.a:0 "Traitors!"
+
+ eruption_of_huaynaputina.15.title:0 "Peasents manage to steal food from ally"
+ eruption_of_huaynaputina.15.desc:0 "Somehow peasents managed to steal food from our ally. Now we have more supplies."
+ eruption_of_huaynaputina.15.a:0 "I didn't expect them to succeed."
+
+ eruption_of_huaynaputina.16.title:0 "Peasents raid fail"
+ eruption_of_huaynaputina.16.desc:0 "Our ally managed to defeat this raid. Raiders are now dead or in prison."
+ eruption_of_huaynaputina.16.a:0 "Less man to feed now."
+
+ eruption_of_huaynaputina.17.title:0 "Cannibals?!"
+ eruption_of_huaynaputina.17.desc:0 "Acts of cannibalism have spread in one of our provinces. These animals hunt down travelers and eat them. "
+ eruption_of_huaynaputina.17.a:0 "We can not do anything with that right now. Try to avoid this."
+
+ eruption_of_huaynaputina.18.title:0 "Is God still with us?"
+ eruption_of_huaynaputina.18.desc:0 "This apocalypse doesn't seem to end fast. Is this a punishment from God, are we sinners? Does the God want our death? Should we pray?"
+ eruption_of_huaynaputina.18.a:0 "God will never leave us. Pray to him!"
+ eruption_of_huaynaputina.18.b:0 "We can survive on our own!"
+
+ eruption_of_huaynaputina.19.title:0 "God ignores us"
+ eruption_of_huaynaputina.19.desc:0 "Much time have passed since our request. Does the God exist? Or maybe it's fault of all these heretics all around us?"
+ eruption_of_huaynaputina.19.a:0 "Heretics made our god angry! They will bleed for that!"
+ eruption_of_huaynaputina.19.b:0 "It's time to start cult of new, powerful Gods!"
+ eruption_of_huaynaputina.19.c:0 "Our spirits will not die!"
+ eruption_of_huaynaputina.19.d:0 "If we can not grow our food, we will raid it!"
+ eruption_of_huaynaputina.19.e:0 "Old Gods were much more powerful!"
+
+ eruption_of_huaynaputina.20.title:0 "Jews are guilty?"
+ eruption_of_huaynaputina.20.desc:0 "Jews endure the apocalypse suspiciously well. Some people start to think that this disaster is their job. What do we do?"
+ eruption_of_huaynaputina.20.a:0 "Expel them!"
+ eruption_of_huaynaputina.20.b:0 "Leave them alone."
+
+ eruption_of_huaynaputina.22.title:0 "The sky is bright again!"
+ eruption_of_huaynaputina.22.desc:0 "We have survived 20 years of apocalypse. Many of us have died. But situation seems to be better and better. We don't know what was the reason of this disaster but it's not important now. We have to rebuild our country and population."
+ eruption_of_huaynaputina.22.a:0 "Take hammer, take sickle! Finally, the doom is over!"
+
+
+
+ BLOBERS_first_failed_harvest:0 "First Failed Harvest"
+ desc_BLOBERS_first_failed_harvest:0 ""
+
+ BLOBERS_second_failed_harvest:0 "Second Failed Harvest"
+ desc_BLOBERS_second_failed_harvest:0 ""
+
+ BLOBERS_third_year_unrest:0 "Unrest and Famine"
+ desc_BLOBERS_third_year_unrest:0 ""
+
+ BLOBERS_third_year_population_decreases:0 "Less Suitable Recruits"
+ desc_BLOBERS_third_year_population_decreases:0 ""
+
+ BLOBERS_third_year_toxic_ashes:0 "Toxic Ashes from the Sky"
+ desc_BLOBERS_third_year_toxic_ashes:0 ""
+
+ BLOBERS_third_year_collapsing_economy:0 "Collapse of Economy"
+ desc_BLOBERS_third_year_collapsing_economy:0 ""
+
+ BLOBERS_cannibals:0 "Cannibals in province!"
+ desc_BLOBERS_cannibals:0 ""
+
+ BLOBERS_punish_heretics:0 "Punish Heretics"
+ desc_BLOBERS_punish_heretics:0 ""
+
+ BLOBERS_jews_expelled:0 "Jews Expelled"
+ desc_BLOBERS_jews_expelled:0 ""
+
+ BLOBERS_protecting_jews:0 "Protecting Jews"
+ desc_BLOBERS_protecting_jews:0 ""
+
+ BLOBERS_huaynaputina_ended:0 "End of ''Dark Sky''"
+ desc_BLOBERS_huaynaputina_ended:0 "We haven't store enough food. We received mild bonuses."
+
+ BLOBERS_huaynaputina_ended_food:0 "End of ''Dark Sky''"
+ desc_BLOBERS_huaynaputina_ended_food:0 "A lot of food has been stored buy us. We will receive many bonuses."
